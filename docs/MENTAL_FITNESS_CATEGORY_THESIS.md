@@ -28,7 +28,7 @@ These findings support structured, goal-linked development with a human guide. R
 
 Reviews of digital mental-health interventions study the role of human guidance, feedback, encouragement, and assignment review. A systematic review and meta-review identify guidance as a meaningful design variable and call for clearer study of the type and timing of human support ([Human support meta-review](https://pmc.ncbi.nlm.nih.gov/articles/PMC9941905/); [nonclinician guidance meta-analysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC9244656/)). A 2024 scoping review maps therapist behaviours in guided digital interventions, including feedback, encouragement, monitoring, and tailoring ([therapist behaviours review](https://pubmed.ncbi.nlm.nih.gov/38881817/)).
 
-This gives Room to Respond a natural product foundation: practitioner guidance, client practice between contacts, and review that informs the next interaction.
+This gives Room to Respond a natural product foundation: coach guidance, client practice between contacts, and review that informs the next interaction.
 
 ### Practice, reflection, and transfer
 
@@ -48,14 +48,14 @@ The research programme should track:
 - which activities people increasingly delegate to AI;
 - whether delegation changes confidence, memory, judgment, or learning;
 - whether people want deliberate practice for faculties they use less often;
-- whether practitioners see value in assigning these routines to clients;
+- whether coaches see value in assigning these routines to clients;
 - whether routine completion transfers into observable behaviour or meaningful client goals.
 
-## Why the practitioner is central
+## Why the coach is central
 
-The practitioner gives the routine its purpose and boundaries. They understand the client's goals, history, context, readiness, and current work. They choose what deserves attention, review what the client reports, and decide how the next routine should progress.
+The coach gives the routine its purpose and boundaries. They understand the client's goals, history, context, readiness, and current work. They choose what deserves attention, review what the client shares, and decide how the next routine should progress.
 
-Room to Respond can support that workflow by helping the practitioner:
+Room to Respond can support that workflow by helping the coach:
 
 - translate a goal into a faculty and exercise;
 - assemble a routine for the period between sessions;
@@ -65,13 +65,13 @@ Room to Respond can support that workflow by helping the practitioner:
 - see what changed across contexts;
 - prepare the next session or routine.
 
-For therapy, the platform operates alongside clinical work. For coaching, the platform supports development within the coach's agreed scope. In both settings, practitioners remain responsible for the human relationship, interpretation, and progression of the routine.
+For therapy, the platform operates alongside clinical work. For coaching, the platform supports development within the coach's agreed scope. In both settings, coaches remain responsible for the human relationship, interpretation, and progression of the routine.
 
 ## Room to Respond's first product hypothesis
 
-> A practitioner can create a useful mental workout routine for a client, the client can complete it between sessions, and the resulting report can make the next session more focused and more useful.
+> A coach can create a useful mental workout routine for a client, the client can complete it between sessions, and the resulting reflection can make the next session more focused and more useful.
 
-The first routine combines emotion awareness, metacognition, cognitive flexibility, prospection, and learning. It begins with a real situation, introduces a bounded variation, and returns the learning to the original situation. Future routines can exercise other faculties when their exercises, evidence, and outcomes are clear.
+The first routine combines emotion awareness, metacognition, cognitive flexibility, prospection, and learning. It begins with a moment from life, introduces a bounded variation, and returns the learning to that moment. Future routines can exercise other faculties when their exercises, evidence, and outcomes are clear.
 
 ## Evidence status
 

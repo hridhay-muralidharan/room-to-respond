@@ -2,7 +2,7 @@
 
 ## Sequence
 
-1. **Lived moment:** the user records a real situation in their own words.
+1. **Lived moment:** the user records a moment from their life in their own words.
 2. **Deepening:** optional prompts capture felt experience, thought, speech, action, want, consequence, and present meaning.
 3. **Model review:** the agent offers tentative, evidence-linked observations and one open tension.
 4. **Probe selection:** the agent identifies an unexplored dimension or uncertainty and explains why it matters.

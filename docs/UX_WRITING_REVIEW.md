@@ -11,21 +11,21 @@ The writing should feel:
 - respectful of the client’s authorship;
 - open about uncertainty;
 - easy to scan;
-- useful to a practitioner reading the report.
+- useful to a coach reading the reflection.
 
 ## Terms to use
 
 | Use | Meaning |
 | --- | --- |
 | Guided demo | The seeded experience a reviewer follows |
-| Routine | The complete sequence assigned by a practitioner |
+| Routine | The complete sequence assigned by a coach |
 | Exercise | One part of the routine |
 | Lived situation | What the client experienced in real life |
 | Constructed situation | A changed-condition exercise created for exploration |
 | Observation | A provisional model suggestion grounded in the client’s words |
 | Correction | What the client says the model missed or got wrong |
-| Report | The client’s edited material prepared for the practitioner |
-| Feedback | The practitioner’s response that shapes the next routine |
+| Reflection | The client’s edited material prepared for the coach |
+| Feedback | The coach’s response that shapes the next routine |
 
 ## Terms to avoid
 
@@ -59,8 +59,8 @@ Before a deployment, review every visible string and ask:
 
 1. Does the reviewer know whose view they are in?
 2. Does the title describe the current action rather than the system’s capability?
-3. Is the content clearly marked as client-authored, model-suggested, or practitioner-authored?
-4. Is a real situation separated from a constructed exercise?
+3. Is the content clearly marked as client-authored, model-suggested, or coach-authored?
+4. Is a moment from life separated from a constructed exercise?
 5. Does the button describe the next meaningful action?
 6. Does the handoff explain why the next step follows?
 7. Is uncertainty expressed in plain language?
@@ -70,4 +70,4 @@ Before a deployment, review every visible string and ask:
 
 The reviewer should finish the demo understanding one simple idea:
 
-> A practitioner can shape a routine around a client’s real situation, the client can examine and correct what emerges, and the practitioner can use the resulting report to guide the next routine.
+> A coach can shape a routine around a moment from a client’s life, the client can examine and correct what emerges, and the coach can use the resulting reflection to guide the next routine.

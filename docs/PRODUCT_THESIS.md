@@ -1,6 +1,6 @@
 # Room to Respond — product thesis
 
-Room to Respond is a research prototype for therapists and life coaches to create personalised mental workout routines for clients. Clients practise between sessions using real-life situations, guided scenarios, text, and voice, then share reviewable reports with their practitioner.
+Room to Respond is a research prototype for therapists and life coaches to create personalised mental workout routines for clients. Clients practise between sessions by examining moments from their lives, trying guided scenarios, using text and voice, and sharing reviewable reflections with their coach.
 
 We can understand Room to Respond through a parallel with physical activity. Modern life reduced some of the physical activity built into daily life. Cars replaced some walking. Elevators replaced some climbing. Machines reduced some manual work. This contributed to physical inactivity. ([WHO Global status report on physical activity](https://www.who.int/publications/i/item/9789240059153)).
 
@@ -14,7 +14,7 @@ We’ve attempted to address many of these challenges through therapy. However, 
 
 ## Target Audience
 
-Room to Respond is for therapists, life coaches, and clients who already use technology for mental health, wellbeing, coaching, journaling, meditation, habits, learning, or personal development. The practitioner is the buyer and routine creator. The client is the person who practises between sessions and shares a report. Digital mental-health, therapy, coaching, and wellbeing companies are potential distribution partners.
+Room to Respond is for therapists, life coaches, and clients who already use technology for mental health, wellbeing, coaching, journaling, meditation, habits, learning, or personal development. The coach is the buyer and routine creator. The client is the person who practises between sessions and shares a reflection. Digital mental-health, therapy, coaching, and wellbeing companies are potential distribution partners.
 
 The audience is global. The [Target audience and market](TARGET_AUDIENCE.md) snapshot shows the current TAM and SAM signals and the available geographic distribution of digital mental-health users.
 
@@ -27,11 +27,11 @@ We can group mental faculties by the role that they play in any situation:
 - **Choose:** values, motivation, judgment, decisions, and self-regulation. Self-determination theory connects autonomy, competence, and relatedness with motivation and wellbeing ([Deci, Olafsen, and Ryan](https://doi.org/10.1146/annurev-orgpsych-032516-113108)).
 - **Adapt:** cognitive flexibility, imagination, foresight, feedback, and learning. Research links executive flexibility and prospection with changing strategy, planning, and action ([Diamond](https://doi.org/10.1146/annurev-psych-113011-143750); [Szpunar](https://pmc.ncbi.nlm.nih.gov/articles/PMC4074678/)).
 
-A mental workout can follow a real situation from perception through action and learning and move across all 4 groups. Room to Respond brings the relevant exercises together into a practical routine for a client to exercise their mental faculties.
+A mental workout can follow a moment from perception through action and learning and move across all 4 groups. Room to Respond brings the relevant exercises together into a practical routine for a client to exercise their mental faculties.
 
-## Prototype: one practitioner-led mental workout
+## Prototype: one coach-led mental workout
 
-A practitioner assigns the first routine. The client brings in a real situation and describes what happened, what they felt, thought, said, did, wanted, and noticed afterward.
+A coach assigns the first routine. The client thinks of a moment from their life and describes what happened, what they felt, thought, said, did, wanted, and noticed afterward.
 
 The system then:
 
@@ -39,9 +39,9 @@ The system then:
 2. changes one condition in the situation, such as the amount of time or support available;
 3. asks the client to respond to the changed situation;
 4. compares the two responses and asks what could be useful in real life;
-5. creates a report that the client can edit and share with the practitioner.
+5. creates a reflection that the client can edit and share with the coach.
 
-The practitioner reviews what changed, what stayed open, and what the client wants to explore. This informs the next routine.
+The coach reviews what changed, what stayed open, and what the client wants to explore. This informs the next routine.
 
 The workout exercises emotion awareness, metacognition, cognitive flexibility, prospection, and learning. Memory, values, social cognition, and meaning-making may also appear in the account. This first routine is a research prototype; evaluation will examine which outcomes the prompts affect and how exercises for a wider range of faculties can be combined into efficient mental workout routines.
 
@@ -60,7 +60,7 @@ GenAI marks an inflection point because it can build a workout around the client
 - helping compare situations across time;
 - supporting text and future voice interaction.
 
-The client supplies the experience, reviews the interpretation, and decides what to carry forward. The practitioner sets the direction and reviews the report.
+The client supplies the experience, reviews the reflection, and decides what to carry forward. The coach sets the direction and reviews the reflection.
 
 ## Research and validation
 
@@ -77,7 +77,7 @@ Each faculty needs its own research review. The review should cover:
 
 ## Privacy: the guardrail and the roadblock
 
-Privacy is central because the product works with intimate situations, emotional responses, personal patterns, and changes across time. A practitioner-client product also needs clear control over what the client shares, what the practitioner can review, and what the model processes. A hosted product sends that material through an application operator and a model provider.
+Privacy is central because the product works with intimate moments, emotional responses, personal patterns, and changes across time. A coach-client product also needs clear control over what the client shares, what the coach can review, and what the model processes. A hosted product sends that material through an application operator and a model provider.
 
 On-device inference opens the path to privacy-first personal AI products. Personal memory and reasoning can stay on the user's device. The launch standard includes local encryption, deletion, recovery, sharing, and device security alongside capable reasoning.
 

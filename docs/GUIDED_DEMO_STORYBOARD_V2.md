@@ -4,7 +4,7 @@
 
 The guided demo should let a first-time reviewer understand Room to Respond without reading the repository or learning the product vocabulary.
 
-The reviewer follows one prepared story about Maya and her practitioner. Nothing needs to be written. Every screen answers three questions:
+The reviewer follows one prepared story about Maya and her coach. Nothing needs to be written. Every screen answers three questions:
 
 1. Who is acting now?
 2. What is happening in this part of the routine?
@@ -16,9 +16,9 @@ The reviewer follows one prepared story about Maya and her practitioner. Nothing
 
 **Train your mind like you train your body.**
 
-**A practitioner creates a mental workout. A client exercises it through the moments that shape life.**
+**A coach creates a mental workout. A client exercises it through the moments that shape life.**
 
-This is the first explanation of the product. The landing page should then explain the development side of mental health, the physical-gym parallel, the practitioner-led solution, and the role of GenAI.
+This is the first explanation of the product. The landing page should then explain the development side of mental health, the physical-gym parallel, the coach-led solution, and the role of GenAI.
 
 ### Primary action
 
@@ -34,9 +34,9 @@ Show three large, plain-language stages:
 
 | Stage | What the reviewer understands |
 | --- | --- |
-| **Set a direction** | A practitioner chooses what the client will practise. |
-| **Work through a moment** | The client brings in a real situation, checks what the reflection picked up, and tries one change. |
-| **Review and continue** | The client shares what they noticed. The practitioner responds and prepares the next routine. |
+| **Set a direction** | A coach chooses what the client will practise. |
+| **Work through a moment** | The client looks at a moment from life, checks what the reflection picked up, and tries one change. |
+| **Review and continue** | The client shares what they noticed. The coach responds and prepares the next routine. |
 
 ### Demo context
 
@@ -44,7 +44,7 @@ Show the prepared story before the reviewer starts:
 
 > **Maya’s focus:** make more space before responding to criticism.
 >
-> You will see a practitioner suggest a routine, Maya work through a difficult review meeting, and the practitioner use her report to shape what comes next.
+> You will see a coach suggest a routine, Maya work through a difficult review meeting, and the coach use her reflection to shape what comes next.
 
 This gives the reviewer the reason for the journey before the first click.
 
@@ -72,9 +72,9 @@ The current phase is active. Completed phases remain visible. Future phases are 
 
 Every screen has a clear label:
 
-- `Practitioner’s turn`
+- `Coach’s turn`
 - `Maya’s turn`
-- `Back to the practitioner`
+- `Back to the coach`
 
 This label should appear before the screen title, not be hidden in navigation.
 
@@ -87,24 +87,24 @@ Each screen has one primary action. The button says what the reviewer is about t
 - `See the reflection`
 - `Try one thing changed`
 - `Read Maya’s report`
-- `See the practitioner’s response`
+- `See the coach’s response`
 - `See what comes next`
 
 ## Guided steps
 
-### Step 1 — Practitioner sets a direction
+### Step 1 — Coach sets a direction
 
-**Turn:** Practitioner’s turn
+**Turn:** Coach’s turn
 
 **Title:** Choose what Maya will practise
 
-**Explanation:** Maya wants to create more space before responding to criticism. The practitioner turns that goal into a short routine.
+**Explanation:** Maya wants to create more space before responding to criticism. The coach turns that goal into a short routine.
 
 **Visible content:**
 
 - Maya’s focus;
 - four exercises;
-- a short practitioner note;
+- a short coach note;
 - what Maya will bring back.
 
 **Primary action:** `See Maya’s routine`
@@ -195,35 +195,35 @@ Avoid “constructed situation” as the main heading. It can appear in supporti
 - open question;
 - `Maya wrote this` and `From the reflection` labels where relevant.
 
-**Primary action:** `See the practitioner’s response`
+**Primary action:** `See the coach’s response`
 
 The demo treats the report as already shared. The reviewer should not need to click through a simulated permission dialog.
 
-### Step 7 — Practitioner responds
+### Step 7 — Coach responds
 
-**Turn:** Back to the practitioner
+**Turn:** Back to the coach
 
-**Title:** The practitioner sees what changed
+**Title:** The coach sees what changed
 
-**Explanation:** Maya’s report gives the practitioner something concrete to discuss and a direction for the next exercise.
+**Explanation:** Maya’s reflection gives the coach something concrete to discuss and a direction for the next exercise.
 
 **Visible content:**
 
 - what changed;
 - what stayed open;
 - Maya’s question;
-- practitioner feedback;
+- coach feedback;
 - clear authorship labels.
 
 **Primary action:** `See what comes next`
 
 ### Step 8 — The next routine is ready
 
-**Turn:** Practitioner’s turn
+**Turn:** Coach’s turn
 
 **Title:** The next routine grows from the report
 
-**Explanation:** The practitioner keeps the useful focus, adds direct communication, and shapes the next exercise around the pause Maya noticed.
+**Explanation:** The coach keeps the useful focus, adds direct communication, and shapes the next exercise around the pause Maya noticed.
 
 **Visible content:**
 
@@ -238,14 +238,14 @@ The demo treats the report as already shared. The reviewer should not need to cl
 
 | Current internal wording | Guided-demo wording |
 | --- | --- |
-| Practitioner workspace | Practitioner’s turn |
+| Coach workspace | Coach’s turn |
 | Client view | Maya’s turn |
 | Model review | See what the reflection picked up |
 | Tentative observations | Possible threads |
 | Model-suggested observations | From the reflection |
 | Constructed situation | A practice version of the situation |
 | Client report | What Maya brings back |
-| Practitioner review | The practitioner sees what changed |
+| Coach review | The coach sees what changed |
 | Mental faculties | The parts of the mind this routine exercises |
 | Cognitive flexibility | Trying one thing changed |
 | Metacognition | Checking the first story |
@@ -257,10 +257,10 @@ After the redesign, a reviewer should be able to answer these questions from the
 
 - What is Room to Respond?
 - Who is the product for?
-- What is the practitioner doing?
+- What is the coach doing?
 - What is the client doing?
 - Why does the client try a changed version of the situation?
-- What comes back to the practitioner?
+- What comes back to the coach?
 - How does the next routine follow from the report?
 
 If the reviewer needs the repository, a tooltip, or verbal explanation to answer one of these, the information architecture or copy is not finished.

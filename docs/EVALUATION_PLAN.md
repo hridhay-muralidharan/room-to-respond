@@ -2,7 +2,7 @@
 
 ## Product questions
 
-1. Can a practitioner create a useful routine for a client's goal?
+1. Can a coach create a useful routine for a client's goal?
 2. Can they distinguish what happened from what they felt, thought, said, did, wanted, and concluded?
 3. Are model claims grounded, correctable, and useful without becoming fixed labels?
 4. Does a model-guided constructed situation help users notice a meaningful similarity, difference, or uncertainty?
@@ -30,9 +30,9 @@
 ## Research sequence
 
 1. Therapist, coach, and lived-experience review of the routine model, report contract, and prompts.
-2. Practitioners create one routine for 5–8 clients who complete one lived situation, one probe, and one transfer review.
+2. Coaches create one routine for 5–8 clients who complete one moment from life, one probe, and one transfer review.
 3. Structured interviews focus on routine usefulness, agency, emotional impact, report quality, and session value.
-4. Red-team testing covers overreach, sensitive disclosures, practitioner-client sharing, and misleading simulation.
+4. Red-team testing covers overreach, sensitive disclosures, coach-client sharing, and misleading simulation.
 5. A larger pilot follows an appropriate ethics, privacy, and safety process.
 
 Do not infer clinical efficacy from engagement, satisfaction, or one founder case study.

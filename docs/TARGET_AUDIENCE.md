@@ -4,7 +4,7 @@
 
 Room to Respond is for therapists, life coaches, and clients who already use technology for mental health, wellbeing, coaching, journaling, meditation, habits, learning, or personal development.
 
-The practitioner is the buyer and workout creator. The client exercises between sessions and shares reports and outcomes with the practitioner. Digital mental-health, therapy, coaching, and wellbeing companies are potential distribution partners.
+The coach is the buyer and workout creator. The client exercises between sessions and shares reflections and outcomes with the coach. Digital mental-health, therapy, coaching, and wellbeing companies are potential distribution partners.
 
 ## Market snapshot
 

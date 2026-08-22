@@ -4,7 +4,7 @@ This document governs the prototype's visual and interaction decisions. It is wr
 
 ## Design objective
 
-Make the practitioner-client relationship and the workout sequence understandable within seconds. The interface should feel calm, clear, and considered. It should create enough room for personal material without becoming empty or abstract.
+Make the coach-client relationship and the workout sequence understandable within seconds. The interface should feel calm, clear, and considered. It should create enough room for personal material without becoming empty or abstract.
 
 The experience should also create the energy to begin a workout. The reviewer should feel guided into action, notice progress while moving through the routine, and finish with a useful next step they want to try. The energy comes from clear focus, coach-like instruction, variety, rhythm, and completion. It does not come from loud decoration or fitness branding copied onto a mental-health product.
 
@@ -30,7 +30,7 @@ It should communicate this sequence:
 2. Modern life has reduced some built-in physical activity and created a need for dedicated physical workouts.
 3. Modern life also puts pressure on how people pay attention, regulate emotion, decide, communicate, and adapt.
 4. Room to Respond applies the workout idea to mental faculties.
-5. A practitioner creates a routine and a client works through it using real and constructed situations.
+5. A coach creates a routine and a client works through it using moments from life and constructed situations.
 6. The guided demo shows the complete loop.
 
 The landing page should use direct language. It should not lead with internal product terminology, research taxonomy, privacy architecture, or a list of abstract capabilities.
@@ -40,18 +40,18 @@ The landing page should use direct language. It should not lead with internal pr
 The demo should have:
 
 - a persistent routine progress indicator;
-- a clear practitioner/client role marker;
+- a clear coach/client role marker;
 - a short explanation of the current exercise;
 - the seeded content that demonstrates the exercise;
-- a visible handoff when the routine moves between practitioner and client;
+- a visible handoff when the routine moves between coach and client;
 - a single primary next action;
 - a compact context panel showing the workout focus and faculties.
 
-The progress indicator should describe the story, for example: “Set direction → Work through a situation → Review the report → Shape the next workout.” It should not expose implementation names such as `practitioner`, `reflection`, or `constructed` without explanation.
+The progress indicator should describe the story, for example: “Set direction → Work through a moment → Review the reflection → Shape the next workout.” It should not expose implementation names such as `coach`, `reflection`, or `constructed` without explanation.
 
 The guided demo should have the rhythm of a workout session:
 
-- **Warm up:** arrive with a real situation and notice what is already happening;
+- **Warm up:** arrive at a moment from life and notice what is already happening;
 - **Work:** examine the moment and try one carefully bounded change;
 - **Cool down:** name what changed and carry one useful next step forward.
 
@@ -61,13 +61,13 @@ Each phase needs a clear instruction, visible progress, and a satisfying handoff
 
 Use these labels consistently:
 
-- **Practitioner direction** — what the practitioner wants to exercise.
+- **Coach direction** — what the coach wants to exercise.
 - **Your situation** — the client's lived account.
 - **What the reflection noticed** — model suggestions.
 - **Your correction** — the client's response to the model.
 - **A different condition** — the constructed exercise.
-- **Your report** — the client-controlled material shared with the practitioner.
-- **Practitioner feedback** — the response that shapes the next routine.
+- **Your reflection** — the client-controlled material shared with the coach.
+- **Coach feedback** — the response that shapes the next routine.
 
 Avoid clinical labels, personality labels, diagnostic language, and opaque AI labels.
 
@@ -80,11 +80,11 @@ Avoid clinical labels, personality labels, diagnostic language, and opaque AI la
 - Make model suggestions visibly tentative without making them visually weak or alarming.
 - Make the constructed exercise visually distinct before the client responds.
 - Make the report feel editable and owned by the client.
-- Make the practitioner response feel like a continuation of the same routine.
+- Make the coach response feel like a continuation of the same routine.
 
 ## UX writing rules
 
-- Write like a thoughtful practitioner explaining one exercise to a client.
+- Write like a thoughtful coach explaining one exercise to a client.
 - Prefer “What happened?” to “Describe the lived scenario.”
 - Prefer “What did you feel, think, say, and do?” to “Capture your internal and external response.”
 - Prefer “Does this fit?” to “Validate the model output.”
@@ -95,4 +95,4 @@ Avoid clinical labels, personality labels, diagnostic language, and opaque AI la
 
 ## Visual acceptance standard
 
-The prototype is not ready when it merely looks clean. It is ready when a first-time reviewer can understand the relationship, the workout, the role of GenAI, the client control, and the practitioner feedback loop without external explanation.
+The prototype is not ready when it merely looks clean. It is ready when a first-time reviewer can understand the relationship, the workout, the role of GenAI, the client control, and the coach feedback loop without external explanation.

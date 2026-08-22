@@ -2,15 +2,15 @@
 
 ## What the product is
 
-Room to Respond is a practitioner-led mental fitness platform. Therapists and life coaches create personalised mental workout routines for clients. Clients practise between sessions using real situations, guided scenarios, text, and voice, then share reviewable reports with their practitioner.
+Room to Respond is a coach-led mental fitness platform. Therapists and life coaches create personalised mental workout routines for clients. Clients practise between sessions using moments from their lives, guided scenarios, text, and voice, then share reviewable reflections with their coach.
 
 Physical gyms provide physical workouts for physical muscles. Room to Respond explores mental workouts for the faculties people use to live: noticing, feeling, remembering, interpreting, deciding, relating, adapting, and learning.
 
-The practitioner gives the routine its purpose and boundaries. The client supplies the lived experience. GenAI helps personalise the exercise, organise the reflection, and prepare a report. The practitioner reviews what happened and guides the next routine.
+The coach gives the routine its purpose and boundaries. The client supplies the lived experience. GenAI helps personalise the exercise, organise the reflection, and prepare a handoff. The coach reviews what happened and guides the next routine.
 
-## Screen 1 — Practitioner workspace
+## Screen 1 — Coach workspace
 
-The practitioner sees a client list, active routines, recent reports, and open questions for the next session.
+The coach sees a client list, active routines, recent reflections, and open questions for the next session.
 
 For each client, the practitioner can:
 
@@ -22,7 +22,7 @@ For each client, the practitioner can:
 - review submitted reports;
 - give feedback and prepare the next routine.
 
-The first prototype uses a seeded practitioner and client so the workflow can be reviewed without account creation.
+The first prototype uses a seeded coach and client so the workflow can be reviewed without account creation.
 
 ## Screen 2 — Create a routine
 
@@ -57,7 +57,7 @@ The client sees the assigned routine in a simple sequence:
 3. Change one condition.
 4. Carry one useful question forward.
 
-The client can bring in a real situation and describe:
+The client can look at a moment from life and describe:
 
 - what happened;
 - what they noticed;
@@ -81,7 +81,7 @@ The system returns a reviewable reflection:
 - open questions;
 - what could be explored next.
 
-The client can accept, edit, qualify, reject, or leave the reflection open. The practitioner sees the submitted version and the client's corrections.
+The client can accept, edit, qualify, reject, or leave the reflection open. The coach sees the submitted version and the client's corrections.
 
 ## Screen 5 — Changed-condition exercise
 
@@ -110,7 +110,7 @@ The client compares the lived situation and the changed condition:
 
 The report contains the client's account, edited model reflection, response to the changed condition, transfer note, and a question or observation to carry into the next session.
 
-## Screen 7 — Practitioner review
+## Screen 7 — Coach review
 
 The practitioner report view organises:
 
@@ -123,7 +123,7 @@ The practitioner report view organises:
 - open questions for the next session;
 - the client's own requested focus.
 
-The practitioner can add a note, adjust the faculty focus, change the exercise difficulty, or create the next routine.
+The coach can add a note, adjust the faculty focus, change the exercise difficulty, or create the next routine.
 
 The report supports a session. It does not replace the practitioner's relationship, judgement, or clinical responsibility.
 
@@ -156,7 +156,7 @@ GenAI can provide:
 - text and voice interaction;
 - a structured draft for practitioner review.
 
-The practitioner sets the direction. The client supplies the experience and chooses what to share. The model organises and adapts the routine.
+The coach sets the direction. The client supplies the experience and chooses what to share. The model organises and adapts the routine.
 
 ## Screen 10 — Research and progress
 
@@ -172,26 +172,26 @@ Each workout has a research card that explains:
 
 The category thesis separates research-backed foundations, promising mechanisms, trends to track, product hypotheses, and research gaps.
 
-## Screen 11 — Privacy and practitioner control
+## Screen 11 — Privacy and coach control
 
 The product works with intimate situations, emotional responses, personal patterns, and changes across time. The client controls what becomes part of the practitioner report. The practitioner controls the routine and review layer. Hosted inference and future on-device inference have separate documented privacy properties.
 
-The current prototype validates the exercise, routine, report, safety, and distribution workflow using hosted inference. The research, validated routines, practitioner relationships, safety design, and distribution channels need to be ready when capable on-device models can support privacy-first personal AI products.
+The current prototype validates the exercise, routine, reflection, safety, and distribution workflow using hosted inference. The research, validated routines, coach relationships, safety design, and distribution channels need to be ready when capable on-device models can support privacy-first personal AI products.
 
 ## First version
 
-The first version demonstrates one complete practitioner-led routine:
+The first version demonstrates one complete coach-led routine:
 
 ```text
-practitioner creates routine
+coach creates routine
 → client completes lived-situation exercise
 → client explores a changed condition
 → client submits a report
-→ practitioner reviews and prepares the next routine
+→ coach reviews and prepares the next routine
 ```
 
 The broader workout floor remains visible as a research roadmap. Each additional workout earns its place through evidence, design, therapist review, client experience, and evaluation.
 
 ## The final story
 
-> Room to Respond gives therapists and life coaches a way to create personalised mental workout routines for clients. Clients practise between sessions, share what they notice, and return with a clearer report. Practitioners use that report to guide the next conversation and the next workout.
+> Room to Respond gives therapists and life coaches a way to create personalised mental workout routines for clients. Clients practise between sessions, share what they notice, and return with a clearer reflection. Coaches use that reflection to guide the next conversation and the next workout.

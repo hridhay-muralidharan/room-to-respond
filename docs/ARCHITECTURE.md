@@ -1,6 +1,6 @@
 # Architecture
 
-Room to Respond is organised around a practitioner routine → client practice → report → practitioner review loop.
+Room to Respond is organised around a coach routine → client practice → reflection → coach review loop.
 
 ## Layers
 
@@ -14,13 +14,13 @@ Room to Respond is organised around a practitioner routine → client practice �
 
 ## State transitions
 
-1. The practitioner creates or selects a routine for a client.
-2. The client starts with a real situation and adds optional structured details.
+1. The coach creates or selects a routine for a client.
+2. The client starts with a moment from their life and adds optional structured details.
 3. The model proposes evidence-linked threads and a constructed probe.
 4. The client corrects the model and may try the probe.
 5. The client responds to the constructed situation.
 6. The transfer view compares the two responses and creates a report.
-7. The practitioner reviews the report and prepares the next routine.
+7. The coach reviews the reflection and prepares the next routine.
 
 ## Compatibility
 

@@ -13,7 +13,7 @@ The reviewer should be able to answer:
 - What is Room to Respond?
 - Who uses it?
 - What is the connection to a physical gym?
-- What does the practitioner do?
+- What does the coach do?
 - What does the client do?
 - Why is the guided demo worth opening?
 
@@ -27,7 +27,7 @@ The reviewer should be able to answer:
 - Why was this routine chosen?
 - What will the client bring back?
 
-Failure condition: the routine feels like a generic prompt list with no practitioner direction.
+Failure condition: the routine feels like a generic prompt list with no coach direction.
 
 ### Client exercise
 
@@ -44,24 +44,24 @@ Failure condition: the model appears to be diagnosing, profiling, or speaking wi
 
 The reviewer should be able to answer:
 
-- What will be shared with the practitioner?
+- What will be shared with the coach?
 - What did the client decide to keep or change?
-- What can the practitioner learn from the report?
+- What can the coach learn from the reflection?
 
 Failure condition: the report is a model summary that hides the client's own words or corrections.
 
-### Practitioner feedback
+### Coach feedback
 
 The reviewer should be able to answer:
 
-- How does the practitioner respond?
+- How does the coach respond?
 - How does that response shape the next workout?
 
 Failure condition: the demo ends with a static report and does not show a continuing relationship.
 
 ## Persona review
 
-### Practitioner
+### Coach
 
 Can I understand the exercise, assign it, review the client's work, and shape the next routine?
 
@@ -79,11 +79,11 @@ Can a first-time user predict what happens next at every step? Are roles, author
 
 ### UX writer
 
-Does the copy sound like a person speaking to a practitioner or client? Are claims specific and appropriately certain?
+Does the copy sound like a person speaking to a coach or client? Are claims specific and appropriately certain?
 
 ### Visual designer
 
-Does the hierarchy make the story legible? Does the visual system distinguish the client, model, constructed exercise, and practitioner without clutter?
+Does the hierarchy make the story legible? Does the visual system distinguish the client, model, constructed exercise, and coach without clutter?
 
 ### Full-stack developer
 
@@ -96,8 +96,8 @@ The prototype can be deployed for review only when:
 - the eight-step guided journey is complete;
 - every step has seeded content;
 - the landing page and guided demo tell the same product story;
-- the reviewer can identify the practitioner-client handoff;
-- model suggestions, client corrections, and practitioner feedback are visually distinct;
+- the reviewer can identify the coach-client handoff;
+- model suggestions, client corrections, and coach feedback are visually distinct;
 - no public copy makes unsupported audience, efficacy, or category claims;
 - `npm run build` passes;
 - the first-time reviewer test has been run on the deployed preview;

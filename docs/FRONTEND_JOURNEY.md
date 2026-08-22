@@ -1,21 +1,21 @@
 # Frontend journey
 
-The interface should feel like a calm practitioner-led practice for examining experience. It should communicate a routine, a client report, and a return to the next session.
+The interface should feel like a calm coach-led practice for examining experience. It should communicate a routine, a client reflection, and a return to the next session.
 
 ## Screens
 
 ### Landing
 
-Explain the practitioner-client loop:
+Explain the coach-client loop:
 
-- practitioner creates a routine;
-- client brings in a real situation;
+- coach creates a routine;
+- client looks at a moment from their life;
 - client reviews and corrects tentative model signals;
 - client tries a constructed variation;
 - client shares a report;
-- practitioner reviews and prepares the next routine.
+- coach reviews and prepares the next routine.
 
-Actions: open the practitioner workspace, preview the client routine, and begin the assigned workout.
+Actions: open the coach workspace, preview the client routine, and begin the assigned workout.
 
 ### Lived moment
 

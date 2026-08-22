@@ -12,10 +12,10 @@ The repository already establishes these points:
 2. Modern life creates reasons to deliberately develop attention, emotion regulation, judgment, communication, flexibility, foresight, and learning.
 3. Physical gyms make physical workouts practical by bringing exercises together for specific muscles and goals.
 4. Room to Respond applies that organising idea to mental faculties.
-5. Practitioners create personalised mental workout routines.
+5. Coaches create personalised mental workout routines.
 6. Clients exercise those routines through real and simulated situations.
 7. GenAI adapts the routine to the person’s context, words, and changes over time.
-8. The guided practitioner-client loop is the first product demonstration, not the whole category.
+8. The guided coach-client loop is the first product demonstration, not the whole category.
 
 ## Candidate models researched
 
@@ -23,7 +23,7 @@ The repository already establishes these points:
 
 Positioning frameworks ask what category the product belongs to, who it is for, what alternative people use today, and what differentiated value it provides. April Dunford’s positioning work is useful because it forces the product story to connect category, best-fit customer, alternatives, differentiated capability, and value ([Positioning](https://www.aprildunford.com/category/positioning)).
 
-**Useful for Room to Respond:** defining mental fitness as a development category and making the practitioner the buyer.
+**Useful for Room to Respond:** defining mental fitness as a development category and making the coach the buyer.
 
 **Insufficient on its own:** it does not explain the sequence of understanding inside the product or the client’s experience.
 
@@ -31,14 +31,14 @@ Positioning frameworks ask what category the product belongs to, who it is for, 
 
 Jobs-to-Be-Done focuses on the progress a person is trying to make and why they choose a solution in a particular situation. The framework is useful for avoiding feature-led product descriptions and identifying the real job behind a request ([Harvard Business Review](https://hbr.org/2016/09/know-your-customers-jobs-to-be-done)).
 
-**Useful for Room to Respond:** separating the practitioner’s job from the client’s job.
+**Useful for Room to Respond:** separating the coach’s job from the client’s job.
 
 ```text
-Practitioner job:
+Coach job:
 Help a client deliberately develop a mental faculty through a routine that can be reviewed and adapted.
 
 Client job:
-Use a real situation to notice, try, and carry forward a more useful way of meeting life.
+Use a moment from life to notice, try, and carry forward a more useful response.
 ```
 
 **Insufficient on its own:** it does not provide the category story or the interface hierarchy.
@@ -71,7 +71,7 @@ NEED
 What human development problem follows from that shift?
         ↓
 BUYER JOB
-What does the practitioner need to help the client do?
+What does the coach need to help the client do?
         ↓
 PRODUCT MODEL
 How does a mental workout organise that work?
@@ -108,7 +108,7 @@ Room to Respond is a gym for the mind. It brings exercises for different faculti
 
 ### GenAI mechanism
 
-GenAI can adapt the exercise to the client’s own words, connect real situations with bounded variations, hold useful context, and prepare a reviewable report. The practitioner sets the direction and interprets the work.
+GenAI can adapt the exercise to the client’s own words, connect moments from life with bounded variations, hold useful context, and prepare a reviewable reflection. The coach sets the direction and interprets the work.
 
 ### Visible proof
 
@@ -116,18 +116,18 @@ The guided demo shows one mental workout:
 
 ```text
 development goal
-→ practitioner-created routine
-→ real situation
+→ coach-created routine
+→ moment from life
 → reflection and correction
 → changed condition
 → report
-→ practitioner feedback
+→ coach feedback
 → next routine
 ```
 
 ### Next action
 
-The reviewer should leave understanding the category, the practitioner’s role, the client’s role, and why the guided workout is a credible first demonstration.
+The reviewer should leave understanding the category, the coach’s role, the client’s role, and why the guided workout is a credible first demonstration.
 
 ## Application rules
 
@@ -137,7 +137,7 @@ Follow the full Category-to-Aha sequence. The landing page earns attention with 
 
 ### Guided demo
 
-Begin with the development goal and the practitioner-created workout. Do not begin with the between-session logistics. Those are part of the proof sequence.
+Begin with the development goal and the coach-created workout. Do not begin with the between-session logistics. Those are part of the proof sequence.
 
 ### Interface
 

@@ -199,6 +199,7 @@ html { scroll-behavior: smooth; }
 /* Four-screen practitioner-client loop. The gym parallel stays in the structure, not in every label. */
 .guided-four-step-heading { grid-template-columns: 1.25fr .75fr; }
 .guided-four-step-progress { grid-template-columns: repeat(4, 1fr) auto; }
+.guided-six-step-progress { grid-template-columns: repeat(6, 1fr) auto; }
 .guided-four-step-stage { padding-top: 58px; }
 .context-workspace { display: grid; grid-template-columns: 1.25fr .75fr; gap: 1px; background: var(--line); }
 .context-story, .context-focus { padding: 32px; background: var(--paper); }
@@ -258,9 +259,33 @@ html { scroll-behavior: smooth; }
 .next-session-details { background: #e5e9e2 !important; }
 .next-session-details strong { display: block; font: 19px 'Newsreader', serif; margin: 7px 0 23px; }
 .guided-four-step-stage > .guided-complete { margin-top: 28px; }
+.transfer-workspace { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); }
+.transfer-prompt, .transfer-response { padding: 32px; background: var(--ink); color: var(--paper); min-height: 320px; }
+.transfer-prompt .section-label, .transfer-response .section-label { color: #f0a185; }
+.transfer-prompt h4 { font: 35px/1 'Newsreader', serif; margin: 30px 0 14px; }
+.transfer-prompt p { color: #d7cec1; font-size: 15px; line-height: 1.5; max-width: 470px; }
+.transfer-prompt .warmup-reveal { margin-top: 28px; }
+.transfer-response { background: #e5e9e2; color: var(--ink); }
+.transfer-response blockquote { font: 24px/1.4 'Newsreader', serif; margin: 34px 0 0; }
+.transfer-awaiting { color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 80px; max-width: 240px; }
+.report-workspace { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); }
+.report-column { background: var(--soft); padding: 28px; min-height: 250px; }
+.report-column:nth-child(2) { background: #e5e9e2; }
+.report-column blockquote { font: 23px/1.4 'Newsreader', serif; margin: 30px 0 0; }
+.report-insight { display: grid; grid-template-columns: 1.2fr .8fr; gap: 1px; background: var(--line); margin-top: 1px; }
+.report-insight > div { background: var(--paper); padding: 26px; }
+.report-insight > div:first-child { background: var(--ink); color: var(--paper); }
+.report-insight > div:first-child .section-label { color: #f0a185; }
+.report-insight h4 { font: 29px/1.05 'Newsreader', serif; margin: 22px 0 10px; }
+.report-insight p { color: var(--muted); font-size: 13px; line-height: 1.5; }
+.report-insight > div:first-child p { color: #d7cec1; }
+.report-share { margin-top: 1px; }
+.response-evidence { border-top: 1px solid var(--line); margin-top: 26px; padding-top: 17px; }
+.response-evidence small { display: block; color: var(--accent); font: 10px 'DM Mono', monospace; text-transform: uppercase; }
+.response-evidence strong { display: block; font: 19px/1.2 'Newsreader', serif; margin-top: 8px; }
 @media (max-width: 780px) {
-  .guided-four-step-progress { display: flex; }
-  .guided-four-step-progress button { min-width: 155px; }
+  .guided-four-step-progress, .guided-six-step-progress { display: flex; }
+  .guided-four-step-progress button, .guided-six-step-progress button { min-width: 155px; }
   .context-workspace, .mapping-workspace, .response-workspace, .next-session-card { display: block; background: transparent; }
   .context-story, .context-focus, .mapping-account, .mapping-observations, .response-confirmed, .response-practitioner, .next-session-card > div { margin-top: 1px; padding: 22px; }
   .context-story h4, .context-focus h4, .situation-workspace h4, .response-workspace h4, .next-session-card h4 { font-size: 32px; }
@@ -270,6 +295,9 @@ html { scroll-behavior: smooth; }
   .situation-details > div { margin-top: 1px; }
   .mapping-send { display: block; padding: 20px; }
   .mapping-send .share-report { margin-top: 18px; }
+  .transfer-workspace, .report-workspace, .report-insight { display: block; background: transparent; }
+  .transfer-prompt, .transfer-response, .report-column, .report-insight > div { margin-top: 1px; padding: 22px; }
+  .transfer-response { min-height: 250px; }
 }
 
 /* Distinct workout moments inside the guided session. */

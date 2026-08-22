@@ -69,8 +69,10 @@ The prototype is a seeded guided demo for review. It must make one complete prac
 
 1. The practitioner gives context for the development focus.
 2. The client brings a real situation.
-3. The client reviews, corrects, and shares the possible mapping.
-4. The practitioner responds and shapes the next routine.
+3. The client reviews and corrects the possible mapping.
+4. The client responds to a changed version of the situation.
+5. The client compares the two responses and sends one combined report.
+6. The practitioner responds and shapes the next routine.
 
 The prototype is proving the relationship and the workflow. It is not proving clinical efficacy, a universal taxonomy of faculties, or that one routine works for every person.
 

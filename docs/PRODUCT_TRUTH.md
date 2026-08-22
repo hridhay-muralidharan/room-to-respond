@@ -67,14 +67,10 @@ GenAI is the adaptive layer. It helps turn a practitioner's direction and a clie
 
 The prototype is a seeded guided demo for review. It must make one complete practitioner-client loop understandable without requiring the reviewer to read the repository:
 
-1. A practitioner sets a development direction.
-2. A client receives the routine.
-3. The client describes a real situation.
-4. The client reviews and corrects a tentative reflection.
-5. The client works through a constructed variation.
-6. The client edits and shares a report.
-7. The practitioner reviews the report.
-8. The practitioner gives feedback and shapes the next routine.
+1. The practitioner gives context for the development focus.
+2. The client brings a real situation.
+3. The client reviews, corrects, and shares the possible mapping.
+4. The practitioner responds and shapes the next routine.
 
 The prototype is proving the relationship and the workflow. It is not proving clinical efficacy, a universal taxonomy of faculties, or that one routine works for every person.
 

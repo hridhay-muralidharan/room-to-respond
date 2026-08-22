@@ -38,89 +38,57 @@ The client needs to know:
 
 ## Guided demo sequence
 
-### 1. Set the direction
+### 1. Set the context
 
-The practitioner sees a client focus, the faculties involved, the exercises in order, and the intended report.
+The practitioner explains what they have noticed across sessions, why the development focus matters, which faculties it involves, and what the client will explore.
 
-The screen must answer: “What are we working on, and why?”
+The screen must answer: “Why am I being asked to do this?”
 
-### 2. Assign the routine
+### 2. Bring a real situation
 
-The routine becomes a clear handoff from practitioner to client. The client view carries forward the same focus, language, and expected outcome.
+The client describes what happened in her own words, including what she felt, thought, said, did, and wanted.
 
-The screen must answer: “What did my practitioner ask me to do?”
+The screen must answer: “What situation am I bringing into this focus?”
 
-### 3. Bring a real situation
+### 3. Confirm and share the mapping
 
-The client describes what happened in one open writing space. Supporting prompts help them include what they felt, thought, said, did, wanted, and noticed afterward.
+The product maps possible connections to the client's words. The client keeps or questions each one, adds their own correction, and sends the confirmed mapping to the practitioner from the same screen.
 
-The screen must answer: “What situation am I bringing into the workout?”
+The screen must answer: “What fits my experience, and what do I want my practitioner to see?”
 
-### 4. Review the mirror
+### 4. Respond and shape the next session
 
-The product shows a small number of tentative observations alongside the words that support them. The client can keep, revise, or reject each observation.
+The practitioner sees what the client confirmed, responds to it, and sets the next session with a clear focus and progression.
 
-The screen must answer: “What is the product noticing, and do I agree?”
-
-### 5. Work through a constructed situation
-
-The product changes one relevant condition and asks the client to respond. The condition must be explicit. The exercise must be clearly labelled as constructed.
-
-The screen must answer: “What possibility am I exploring?”
-
-### 6. Compare and make meaning
-
-The client sees what stayed the same, what changed, what became easier or harder, and what they want to remember.
-
-The screen must answer: “What did I learn from comparing the two situations?”
-
-### 7. Edit and share the report
-
-The report keeps five kinds of content visibly separate:
-
-- client account;
-- model reflection;
-- client correction;
-- constructed response and comparison;
-- client question or transfer note.
-
-The client reviews the entire report before sharing it.
-
-The screen must answer: “What exactly will my practitioner see?”
-
-### 8. Review and shape the next routine
-
-The practitioner reads the report, adds a short response, and chooses what to continue, change, or explore next.
-
-The screen must answer: “How does this workout affect the next one?”
+The screen must answer: “What did the practitioner learn, and what will we practise next?”
 
 ## Seeded demo content
 
-The demo uses Maya as a fictional client. The full seeded content must be present in every step, including:
+The demo uses Maya as a fictional client. The full seeded content must be present across the four screens, including:
 
-- practitioner direction;
+- practitioner observations across sessions;
+- the reason pausing matters;
+- the faculties involved;
+- the intended session focus;
 - client situation;
 - client feelings, thoughts, words, actions, and wants;
-- model observations;
-- client corrections;
-- constructed situation;
-- constructed response;
-- comparison;
-- editable report;
+- possible mappings with supporting evidence;
+- client confirmations and corrections;
+- the shared mapping;
 - practitioner feedback;
-- next routine draft.
+- next session focus and progression.
 
 The reviewer should never need to invent content to reach the product's central idea.
 
 ## Interaction requirements
 
-- The current position in the routine is always visible.
+- The current position in the four-screen loop is always visible.
 - The next action is obvious from the content, not only from a button label.
 - Practitioner and client perspectives are clearly named.
-- Real, model-generated, constructed, client-edited, and practitioner-authored content have distinct visual treatments.
+- Client-authored, model-suggested, client-confirmed, and practitioner-authored content have distinct visual treatments.
 - The demo can be completed in one sitting.
 - The reviewer can move back to understand an earlier step without losing the guided path.
-- The report and next routine make the practitioner-client loop visible.
+- The shared mapping and next session make the practitioner-client loop visible.
 
 ## Explicit non-goals for this prototype
 

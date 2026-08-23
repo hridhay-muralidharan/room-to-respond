@@ -97,17 +97,55 @@ The launch standard includes local encryption, deletion, recovery, sharing, and 
 
 The go-to-market trigger is therefore a hypothesis: launch the privacy-first version when on-device models can provide the reasoning quality needed for the workouts and the full privacy system has been validated.
 
-Until that point, Room to Respond needs to have the following in place:
+The work required before that point is set out in the product roadmap below.
 
-- validated workouts and outcome measures;
-- therapist, coach, and client review of model behaviour and safety boundaries;
-- a user-controlled model of experiences, faculties, changes, and uncertainty;
-- text and voice interaction designs;
-- local storage, deletion, encryption, selective sharing, and recovery flows;
-- a portable model layer that can move from hosted to on-device inference;
-- distribution relationships with therapists, digital-therapy companies, and mental-health organisations.
+## Product roadmap
 
-Today's prototype uses hosted inference when configured. It prepares the interaction, research foundation, and portable model layer for a future on-device product.
+GenAI has reduced the time and cost of turning product ideas into working software. The advantage now comes from knowing what is worth building, designing it with care, and earning trust and distribution.
+
+Room to Respond’s roadmap prioritises the depth needed to make those decisions. A feature can be copied. Research-backed product judgment, validated workouts, a clear point of view, and trusted relationships take longer to build.
+
+### Research
+
+- study the mental faculties people want to develop and the outcomes they care about;
+- identify research-backed mechanisms that can become useful exercises;
+- separate established evidence, promising mechanisms, product hypotheses, and research gaps;
+- define outcome measures for each workout.
+
+### Product design
+
+- turn the research into coach-led mental workout routines;
+- design how a client moves from a moment in life to reflection, another response, and learning they can carry forward;
+- define the models for experiences, faculties, changes, uncertainty, and authorship;
+- design text and voice interactions that feel clear, human, and useful.
+
+### Validation
+
+- test workouts with therapists, coaches, and clients;
+- confirm whether the exercises help people notice useful patterns and choose better responses;
+- measure what changes, what transfers into life, and what remains uncertain;
+- review model behaviour, sharing boundaries, and safety with the people who will use the product.
+
+### Awareness and socialising
+
+- share the research, product model, and validated prototypes with therapists, coaches, researchers, and mental-health companies;
+- build a community around the development of mental faculties and practical mental workouts;
+- develop the language and point of view that help people understand this emerging category.
+
+### Product development
+
+- build the coach-led routine, client experience, reflection model, and review loop;
+- establish local storage, deletion, encryption, selective sharing, and recovery flows;
+- keep the model layer portable across hosted and on-device inference;
+- treat capable on-device offline inference as a product checkpoint: when it can support the reasoning quality needed for the workouts, the privacy-first version can move into deployment readiness.
+
+### Distribution
+
+- build relationships with therapists, coaches, digital-therapy companies, and mental-health organisations;
+- learn which channels can bring the product into trusted coach-client relationships;
+- prepare the product, partnerships, and deployment systems so the opportunity can be seized when the on-device checkpoint is reached.
+
+Today’s prototype is an early product and research artefact within this roadmap. It demonstrates the coach-led interaction and creates a foundation for the research, validation, and product development work ahead.
 
 ## Boundaries
 

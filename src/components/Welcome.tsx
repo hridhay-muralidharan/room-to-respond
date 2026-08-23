@@ -13,7 +13,7 @@ export function Welcome({ onPrivacy, onPractitioner }: Props) {
       <div className="landing-copy">
         <p className="kicker">Room to Respond</p>
         <h1>Give your mind<br /><em>a proper workout.</em></h1>
-        <p className="lede">A coach-led way to build the mental faculties you use in conversations, decisions, work, relationships, and change.</p>
+        <p className="lede">A coach-led way to build the mental faculties you use in conversations, decisions, work, relationships, and unfamiliar situations.</p>
         <div className="welcome-actions"><button className="primary-button" onClick={onPractitioner}>Try a guided workout <span>→</span></button><span className="hero-support">Maya’s session is ready to go</span></div>
       </div>
       <div className="landing-preview" aria-label="Preview of today's mental workout">

@@ -23,7 +23,7 @@ export function PractitionerWorkspace({ onBack }: Props) {
   const next = () => setStep(step === 'intro' ? 'context' : steps[Math.min(currentIndex + 1, steps.length - 1)].id)
 
   useEffect(() => {
-    if (step === 'intro' || step === 'context') return
+    if (step === 'intro') return
     stageRef.current?.scrollIntoView({ block: 'start' })
   }, [step])
 

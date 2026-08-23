@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 type Props = { onBack: () => void }
-type DemoStep = 'context' | 'situation' | 'mapping' | 'transfer' | 'report' | 'response'
+type DemoStep = 'intro' | 'context' | 'situation' | 'mapping' | 'transfer' | 'report' | 'response'
 
 const steps: { id: DemoStep; label: string }[] = [
   { id: 'context', label: 'Set the context' },
@@ -17,13 +17,13 @@ const faculties = ['Attention', 'Emotion awareness', 'Self-regulation', 'Judgmen
 const livedAccount = 'In the review meeting, my manager pointed out that the requirements document still had gaps. I felt exposed and immediately started thinking that I was failing again. I answered briefly, said I would fix it, and then wanted to leave the conversation. Later, I kept replaying the criticism and felt embarrassed that I had not explained what I was struggling with.'
 
 export function PractitionerWorkspace({ onBack }: Props) {
-  const [step, setStep] = useState<DemoStep>('context')
+  const [step, setStep] = useState<DemoStep>('intro')
   const stageRef = useRef<HTMLDivElement>(null)
   const currentIndex = steps.findIndex((item) => item.id === step)
-  const next = () => setStep(steps[Math.min(currentIndex + 1, steps.length - 1)].id)
+  const next = () => setStep(step === 'intro' ? 'context' : steps[Math.min(currentIndex + 1, steps.length - 1)].id)
 
   useEffect(() => {
-    if (step === 'context') return
+    if (step === 'intro' || step === 'context') return
     stageRef.current?.scrollIntoView({ block: 'start' })
   }, [step])
 
@@ -31,31 +31,44 @@ export function PractitionerWorkspace({ onBack }: Props) {
     <div className="guided-demo-heading guided-four-step-heading">
       <div>
         <button className="back-button" onClick={onBack}>← Home</button>
-        <p className="kicker">Maya’s session · {steps[currentIndex].label}</p>
-        <h2>Notice the pattern.<br /><em>Practise another response.</em></h2>
-        <p className="guided-demo-lede">A coach sets the focus. Maya walks through a moment from her life, reviews what it may show, tries another response, and carries the learning into the next session.</p>
+        <p className="kicker">Maya’s session · {step === 'intro' ? 'Guided demo' : steps[currentIndex].label}</p>
+        <h2>{step === 'intro' ? <>See how it works.<br /><em>Then follow Maya’s workout.</em></> : <>Notice the pattern.<br /><em>Practise another response.</em></>}</h2>
+        <p className="guided-demo-lede">{step === 'intro' ? 'A prepared coach–client journey from a development focus to the next workout.' : 'A coach sets the focus. Maya walks through a moment from her life, reviews what it may show, tries another response, and carries the learning into the next session.'}</p>
       </div>
       <div className="guided-demo-client"><span>DEMO CLIENT</span><strong>Maya R.</strong><p>Four sessions into work on responding to criticism.</p></div>
     </div>
 
-    <div className="guided-progress guided-six-step-progress" aria-label={`Step ${currentIndex + 1} of ${steps.length}`}>
+    {step !== 'intro' && <div className="guided-progress guided-six-step-progress" aria-label={`Step ${currentIndex + 1} of ${steps.length}`}>
       {steps.map((item, index) => <button key={item.id} className={index === currentIndex ? 'active' : index < currentIndex ? 'complete' : ''} onClick={() => setStep(item.id)}><span>{String(index + 1).padStart(2, '0')}</span>{item.label}</button>)}
       <div className="guided-local-progress"><strong>Step {currentIndex + 1} of {steps.length}</strong><span>{steps[currentIndex].label}</span></div>
-    </div>
+    </div>}
 
     <div ref={stageRef} className="guided-demo-stage guided-four-step-stage">
+      {step === 'intro' && <IntroStep onNext={next} />}
       {step === 'context' && <ContextStep onNext={next} />}
       {step === 'situation' && <SituationStep onNext={next} />}
       {step === 'mapping' && <MappingStep onNext={next} />}
       {step === 'transfer' && <TransferStep onNext={next} />}
       {step === 'report' && <ReportStep onNext={next} />}
-      {step === 'response' && <ResponseStep onRestart={() => setStep('context')} />}
+      {step === 'response' && <ResponseStep onRestart={() => setStep('intro')} />}
     </div>
   </section>
 }
 
 function ContinueButton({ children, onNext, disabled = false }: { children: string; onNext: () => void; disabled?: boolean }) {
   return <button className="primary-button" onClick={onNext} disabled={disabled}>{children} <span>→</span></button>
+}
+
+function IntroStep({ onNext }: { onNext: () => void }) {
+  return <>
+    <StepIntro label="Before you begin" title="See one complete mental workout." copy="Maya’s coach has noticed that criticism quickly makes her want to leave a conversation. In this demo, you’ll see how the coach turns that pattern into a focused workout, how Maya works through it, and how the coach responds to what she learns." />
+    <div className="demo-orientation">
+      <div className="demo-orientation-roles"><span className="section-label">Who does what</span><div><strong>Coach</strong><p>Sets the focus and shapes the next workout.</p></div><div><strong>Maya</strong><p>Examines a moment from her life and tries another response.</p></div><div><strong>Room to Respond</strong><p>Reflects the work back and prepares the handoff.</p></div></div>
+      <div className="demo-orientation-sequence"><span className="section-label">What you will see</span><ol><li>Coach sets the focus</li><li>Maya looks at a moment from her life</li><li>Maya checks the reflection</li><li>Maya tries another response</li><li>Maya sends the reflection to the coach</li><li>Coach shapes what comes next</li></ol></div>
+    </div>
+    <div className="demo-orientation-note"><strong>This is a prepared demo.</strong><span>Nothing to write. Follow the journey and select Continue when you are ready.</span></div>
+    <div className="guided-action-row"><ContinueButton onNext={onNext}>Start with the coach’s focus</ContinueButton></div>
+  </>
 }
 
 function ContextStep({ onNext }: { onNext: () => void }) {
@@ -76,7 +89,7 @@ function ContextStep({ onNext }: { onNext: () => void }) {
         <div className="context-session"><small>The session</small><strong>One moment from life</strong><span>Notice → explore → choose what to carry forward</span></div>
       </aside>
     </div>
-    <div className="guided-action-row"><ContinueButton onNext={onNext}>Share the focus with Maya</ContinueButton><span>Next: Maya looks at a moment from her life</span></div>
+    <div className="guided-action-row"><ContinueButton onNext={onNext}>See Maya’s starting point</ContinueButton><span>Next: Maya looks at a moment from her life</span></div>
   </>
 }
 

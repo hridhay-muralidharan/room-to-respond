@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 
 type Props = { onBack: () => void }
 type DemoStep = 'intro' | 'context' | 'situation' | 'mapping' | 'transfer' | 'report' | 'response'
+type MappingDecision = 'keep' | 'needs-context'
+type MappingDecisions = Record<string, MappingDecision | undefined>
+
+const mayaContext = 'I wanted to understand what was missing, but I did not know which part needed fixing. That uncertainty made it easier to leave.'
 
 const steps: { id: DemoStep; label: string }[] = [
   { id: 'context', label: 'Coach sets focus' },
@@ -18,9 +22,14 @@ const livedAccount = 'In the review meeting, my manager pointed out that the req
 
 export function GuidedDemo({ onBack }: Props) {
   const [step, setStep] = useState<DemoStep>('intro')
+  const [mappingDecisions, setMappingDecisions] = useState<MappingDecisions>({})
+  const [transferStarted, setTransferStarted] = useState(false)
+  const [reportShared, setReportShared] = useState(false)
   const stageRef = useRef<HTMLDivElement>(null)
   const currentIndex = steps.findIndex((item) => item.id === step)
   const next = () => setStep(step === 'intro' ? 'context' : steps[Math.min(currentIndex + 1, steps.length - 1)].id)
+  const reviewMapping = (key: string, value: MappingDecision) => setMappingDecisions((current) => ({ ...current, [key]: value }))
+  const contextAdded = Object.values(mappingDecisions).includes('needs-context')
 
   useEffect(() => {
     if (step === 'intro') {
@@ -50,10 +59,10 @@ export function GuidedDemo({ onBack }: Props) {
       {step === 'intro' && <IntroStep onNext={next} />}
       {step === 'context' && <ContextStep onNext={next} />}
       {step === 'situation' && <SituationStep onNext={next} />}
-      {step === 'mapping' && <MappingStep onNext={next} />}
-      {step === 'transfer' && <TransferStep onNext={next} />}
-      {step === 'report' && <ReportStep onNext={next} />}
-      {step === 'response' && <ResponseStep onRestart={() => setStep('intro')} />}
+      {step === 'mapping' && <MappingStep decisions={mappingDecisions} onDecide={reviewMapping} onNext={next} />}
+      {step === 'transfer' && <TransferStep contextAdded={contextAdded} started={transferStarted} onStart={() => setTransferStarted(true)} onNext={next} />}
+      {step === 'report' && <ReportStep contextAdded={contextAdded} shared={reportShared} onShare={() => setReportShared(true)} onNext={next} />}
+      {step === 'response' && <ResponseStep contextAdded={contextAdded} onRestart={() => { setStep('intro'); setMappingDecisions({}); setTransferStarted(false); setReportShared(false) }} />}
     </div>
   </section>
 }
@@ -111,56 +120,52 @@ function SituationStep({ onNext }: { onNext: () => void }) {
   </>
 }
 
-function MappingStep({ onNext }: { onNext: () => void }) {
-  const [decisions, setDecisions] = useState<Record<string, 'keep' | 'change' | undefined>>({})
-  const decide = (key: string, value: 'keep' | 'change') => setDecisions((current) => ({ ...current, [key]: value }))
+function MappingStep({ decisions, onDecide, onNext }: { decisions: MappingDecisions; onDecide: (key: string, value: MappingDecision) => void; onNext: () => void }) {
   const confirmed = Object.values(decisions).filter(Boolean).length
   return <>
     <StepIntro label="03 · Maya checks the reflection" title="Does this fit your experience?" copy="The product reflects possible patterns from Maya’s words. Maya keeps what fits and adds context where it does not." />
     <div className="mapping-workspace">
       <div className="mapping-account"><span className="section-label">From Maya’s account</span><blockquote>“I felt exposed and immediately started thinking that I was failing again. I answered briefly and wanted to leave.”</blockquote><span className="guided-authorship">Client-authored</span></div>
-      <div className="mapping-observations"><span className="section-label">Possible patterns</span><MappingCard title="The threat response took over quickly" copy="Feeling exposed may have made leaving feel safer than staying with the conversation." faculty="Emotion awareness · self-regulation" decision={decisions.reaction} onDecide={(value) => decide('reaction', value)} /><MappingCard title="There was little space between feeling and action" copy="The thought “I am failing again” appeared before Maya could ask what was missing or decide how she wanted to respond." faculty="Attention · judgment · flexibility" decision={decisions.story} onDecide={(value) => decide('story', value)} /><div className="mapping-correction"><span className="section-label">Maya’s own reflection</span><p>“I felt threatened, and the urge to leave took over quickly. I can create some space between that feeling and what I do next. In that space, I may be able to ask a question or choose what to say.”</p></div></div>
+      <div className="mapping-observations"><span className="section-label">Possible patterns</span><MappingCard title="The threat response took over quickly" copy="Feeling exposed may have made leaving feel safer than staying with the conversation." faculty="Emotion awareness · self-regulation" decision={decisions.reaction} onDecide={(value) => onDecide('reaction', value)} /><MappingCard title="There was little space between feeling and action" copy="The thought “I am failing again” appeared before Maya could ask what was missing or decide how she wanted to respond." faculty="Attention · judgment · flexibility" decision={decisions.story} onDecide={(value) => onDecide('story', value)} /><div className="mapping-correction"><span className="section-label">Maya’s own reflection</span><p>“I felt threatened, and the urge to leave took over quickly. I can create some space between that feeling and what I do next. In that space, I may be able to ask a question or choose what to say.”</p></div></div>
     </div>
-    <div className="mapping-send"><div><strong>{confirmed ? `${confirmed} pattern${confirmed === 1 ? '' : 's'} reviewed` : 'Review the patterns before continuing'}</strong><span>{confirmed ? 'Maya will use these in the next exercise.' : 'Keep what fits. Add context where it does not.'}</span></div></div>
+    <div className="mapping-send"><div><strong>{confirmed ? `${confirmed} pattern${confirmed === 1 ? '' : 's'} reviewed` : 'Review the patterns before continuing'}</strong><span>{confirmed ? (Object.values(decisions).includes('needs-context') ? 'Maya’s added context will shape the next exercise and the coach’s report.' : 'Maya’s confirmed reflection will shape the next exercise.') : 'Keep what fits. Add context where it does not.'}</span></div></div>
     <div className="guided-action-row"><ContinueButton onNext={onNext} disabled={confirmed === 0}>Try another response</ContinueButton><span>{confirmed ? 'Next: Maya tries another response' : 'Review at least one pattern to continue'}</span></div>
   </>
 }
 
-function MappingCard({ title, copy, faculty, decision, onDecide }: { title: string; copy: string; faculty: string; decision?: 'keep' | 'change'; onDecide: (value: 'keep' | 'change') => void }) {
-  return <article className={decision ? 'mapping-card decided' : 'mapping-card'}><div><small>{faculty}</small><h4>{title}</h4><p>{copy}</p></div><div className="mapping-actions"><button className={decision === 'keep' ? 'mapping-choice active' : 'mapping-choice'} onClick={() => onDecide('keep')}>{decision === 'keep' ? 'Kept ✓' : 'This fits'}</button><button className={decision === 'change' ? 'mapping-choice change active' : 'mapping-choice change'} onClick={() => onDecide('change')}>{decision === 'change' ? 'Needs context ✓' : 'Needs context'}</button></div></article>
+function MappingCard({ title, copy, faculty, decision, onDecide }: { title: string; copy: string; faculty: string; decision?: MappingDecision; onDecide: (value: MappingDecision) => void }) {
+  return <article className={decision ? 'mapping-card decided' : 'mapping-card'}><div><small>{faculty}</small><h4>{title}</h4><p>{copy}</p>{decision === 'needs-context' && <div className="mapping-added-context"><span className="section-label">Maya adds</span><p>“{mayaContext}”</p></div>}</div><div className="mapping-actions"><button className={decision === 'keep' ? 'mapping-choice active' : 'mapping-choice'} onClick={() => onDecide('keep')}>{decision === 'keep' ? 'Kept ✓' : 'This fits'}</button><button className={decision === 'needs-context' ? 'mapping-choice change active' : 'mapping-choice change'} onClick={() => onDecide('needs-context')}>{decision === 'needs-context' ? 'Context added ✓' : 'Needs context'}</button></div></article>
 }
 
-function TransferStep({ onNext }: { onNext: () => void }) {
-  const [started, setStarted] = useState(false)
+function TransferStep({ contextAdded, started, onStart, onNext }: { contextAdded: boolean; started: boolean; onStart: () => void; onNext: () => void }) {
   return <>
     <StepIntro label="04 · Try another response" title="Try the same moment with one thing changed." copy="The moment stays recognisable, but one condition changes. Maya responds first, before the product reflects it back." />
     <div className="transfer-workspace">
-      <div className="transfer-prompt"><span className="section-label">A changed version of the moment</span><h4>The same review meeting, with more time and support afterward.</h4><p>Your manager points out the same gaps. This time, you have the evening free and someone you trust is available afterward. What do you say or do before leaving?</p><button className="warmup-reveal" onClick={() => setStarted(true)}>{started ? 'Maya has responded' : 'See Maya’s response'} <span>{started ? '✓' : '→'}</span></button></div>
+      <div className="transfer-prompt"><span className="section-label">A changed version of the moment</span><h4>The same review meeting, with more time and support afterward.</h4>{contextAdded && <div className="transfer-context"><span className="section-label">Maya’s added context</span><p>{mayaContext}</p></div>}<p>Your manager points out the same gaps. This time, you have the evening free and someone you trust is available afterward. Before leaving, what could you ask so you know what needs fixing first?</p><button className="warmup-reveal" onClick={onStart}>{started ? 'Maya has responded' : 'See Maya’s response'} <span>{started ? '✓' : '→'}</span></button></div>
       <div className={started ? 'transfer-response revealed' : 'transfer-response'}><span className="section-label">Maya’s response</span>{started ? <><blockquote>“I would still feel embarrassed, but I might ask which part I should fix first and say I’ll send an updated version tomorrow. Knowing I can talk it through later makes it easier to stay.”</blockquote><span className="guided-authorship">Client response</span></> : <p className="transfer-awaiting">Her response will appear here after she tries the changed moment.</p>}</div>
     </div>
     <div className="guided-action-row"><ContinueButton onNext={onNext} disabled={!started}>Compare the two moments</ContinueButton><span>{started ? 'Response captured' : 'Try the changed situation first'}</span></div>
   </>
 }
 
-function ReportStep({ onNext }: { onNext: () => void }) {
-  const [shared, setShared] = useState(false)
+function ReportStep({ contextAdded, shared, onShare, onNext }: { contextAdded: boolean; shared: boolean; onShare: () => void; onNext: () => void }) {
   return <>
     <StepIntro label="05 · Review and send" title="See what changed, then send it to your coach." copy="Maya compares her first response with the alternative, adds what she wants her coach to know, and sends the complete reflection." />
-    <div className="report-workspace"><div className="report-column"><span className="section-label">First response</span><blockquote>“I felt exposed, thought I was failing again, answered briefly, and wanted to leave.”</blockquote><span className="guided-authorship">Maya’s account</span></div><div className="report-column"><span className="section-label">Another response</span><blockquote>“Which part should I fix first? I’ll send an updated version tomorrow.”</blockquote><span className="guided-authorship">Maya’s response</span></div></div>
+    <div className="report-workspace"><div className="report-column"><span className="section-label">Maya’s account</span><blockquote>“I felt exposed, thought I was failing again, answered briefly, and wanted to leave.”</blockquote><span className="guided-authorship">Client-authored</span></div>{contextAdded && <div className="report-column"><span className="section-label">Maya’s added context</span><blockquote>“I wanted to understand what was missing, but I did not know which part needed fixing.”</blockquote><span className="guided-authorship">Client-authored</span></div>}<div className="report-column"><span className="section-label">Another response</span><blockquote>“Which part should I fix first? I’ll send an updated version tomorrow.”</blockquote><span className="guided-authorship">Maya’s response</span></div></div>
     <div className="report-insight"><div><span className="section-label">Maya’s comparison</span><h4>The embarrassment stayed. She could still stay for one more exchange.</h4><p>In the changed moment, having more time afterward made it easier to ask one clear question before leaving.</p></div><div><span className="section-label">What Maya wants to remember</span><p>“I can create some space between feeling threatened and what I do next.”</p></div></div>
-    <div className="mapping-send report-share"><div><strong>{shared ? 'Complete reflection sent to the coach' : 'This is what the coach will receive'}</strong><span>{shared ? 'Maya’s account, confirmed reflection, alternative response, and comparison.' : 'The reflection and alternative response stay together.'}</span></div><button className={shared ? 'share-report shared' : 'share-report'} onClick={() => setShared(true)}>{shared ? 'Sent ✓' : 'Send the complete reflection →'}</button></div>
+    <div className="mapping-send report-share"><div><strong>{shared ? 'Complete reflection sent to the coach' : 'This is what the coach will receive'}</strong><span>{shared ? `Maya’s account, ${contextAdded ? 'added context, ' : ''}reflection, and alternative response.` : `Maya’s account, ${contextAdded ? 'added context, ' : ''}reflection, and alternative response stay together.`}</span></div><button className={shared ? 'share-report shared' : 'share-report'} onClick={onShare}>{shared ? 'Sent ✓' : 'Send the complete reflection →'}</button></div>
     <div className="guided-action-row"><ContinueButton onNext={onNext} disabled={!shared}>See the coach’s response</ContinueButton><span>{shared ? 'Next: coach feedback' : 'Send the reflection to continue'}</span></div>
   </>
 }
 
-function ResponseStep({ onRestart }: { onRestart: () => void }) {
+function ResponseStep({ contextAdded, onRestart }: { contextAdded: boolean; onRestart: () => void }) {
   return <>
     <StepIntro label="06 · Coach responds" title="Choose what to practise next." copy="The coach reviews Maya’s account and her other response, then sets the next focus." />
     <div className="response-workspace">
       <div className="response-confirmed"><span className="section-label">What Maya noticed</span><h4>She can stay for one more exchange.</h4><p>In the changed version of the meeting, having more time afterward made it easier to stay with the conversation instead of leaving straight away.</p><div className="response-evidence"><small>Another response she could try</small><strong>“Which part should I fix first? I’ll send an updated version tomorrow.”</strong></div><span className="guided-authorship">Shared by Maya</span></div>
-      <div className="response-coach"><span className="section-label">Coach’s response</span><blockquote>“Next time you notice the urge to leave, stay for one more exchange. Ask one clear question before you go. You do not have to solve everything in that moment.”</blockquote><span className="guided-authorship">Written by the coach</span></div>
+      <div className="response-coach"><span className="section-label">Coach’s response</span><blockquote>{contextAdded ? '“You noticed the urge to leave, and you also noticed that unclear feedback made it harder to stay. Next time, pause and ask which part needs fixing first. You do not have to solve everything in that moment.”' : '“Next time you notice the urge to leave, stay for one more exchange. Ask one clear question before you go. You do not have to solve everything in that moment.”'}</blockquote><span className="guided-authorship">Written by the coach</span></div>
     </div>
-    <div className="next-session-card"><div><span className="section-label">Next session</span><h4>Stay for one more exchange</h4><p>Practise noticing the urge to leave, asking one clear question, and agreeing on what happens next.</p></div><div className="next-session-details"><small>Focus</small><strong>Pause, then ask one clear question</strong><small>Try it when</small><strong>Someone points out a problem</strong><small>Look for</small><strong>One question before leaving</strong></div></div>
+    <div className="next-session-card"><div><span className="section-label">Next session</span><h4>Stay for one more exchange</h4><p>Practise noticing the urge to leave, asking one clear question, and agreeing on what happens next.</p></div><div className="next-session-details"><small>Focus</small><strong>{contextAdded ? 'Pause, then ask for clarity' : 'Pause, then ask one clear question'}</strong><small>Try it when</small><strong>Someone points out a problem</strong><small>Look for</small><strong>{contextAdded ? 'The question that helps you know what to fix' : 'One question before leaving'}</strong></div></div>
     <div className="guided-complete"><strong>The loop is complete.</strong><p>Focus → moment → another response → next workout.</p><button className="secondary-button" onClick={onRestart}>Run the demo again</button></div>
   </>
 }

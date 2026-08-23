@@ -12,7 +12,7 @@ Current mental-health, coaching, and fitness products tend to follow a simple se
 
 Headspace leads with everyday mental-health outcomes and then shows the range of support. Future leads with personal coaching built around a person’s goals and schedule. BetterUp leads with the outcome buyers care about and then explains the human, AI, and measurement layers.
 
-Room to Respond should use the same information order while keeping its own point of view: mental faculties can be developed through routines that connect a coach’s direction with moments from a client’s life between sessions.
+Room to Respond should use the same information order while keeping its own point of view: mental faculties can be developed through routines that connect a coach’s direction with moments from a client’s life.
 
 ## Founder story
 
@@ -26,17 +26,17 @@ Mental health has a development side. Alongside working through difficulty, peop
 
 ### Product
 
-Room to Respond gives coaches a way to turn a development goal into a short mental workout. The client works through moments from life and simulated situations, notices what changes, and sends back a clearer reflection.
+Room to Respond gives coaches a way to turn a development goal into a short mental workout. The client looks at a moment from life, tries another response, and sends back a reflection the coach can use to shape the next workout.
 
 ### Buyer and user
 
-The coach creates the workout and guides the development. The client exercises the faculties through moments from life. The reflection helps both of them decide what to practise next.
+The coach notices a pattern that is getting in the way of development, sets the workout, and reviews the reflection. The client examines the moment, decides what fits, and chooses what to carry forward.
 
 ### Guided-demo invitation
 
 **Follow one complete routine**
 
-See how a coach sets a direction, how a client works through a moment, and how the next routine grows from the reflection.
+See how a coach sets the focus, how a client works through a moment, and how the next workout takes shape.
 
 ## Landing-page copy
 
@@ -52,43 +52,43 @@ Primary action: `Follow the guided demo`
 
 Support line: `A prepared journey. Nothing to write.`
 
-### Problem section
+### Workout range
 
-Headline: `Mental health has a development side.`
+Headline: `Choose what to develop.`
 
-Body: `Therapy and coaching help people work through difficulty. People also want to develop the faculties they use every day: attention, emotion regulation, judgment, communication, flexibility, and learning.`
+Body: `Different goals need different workouts. Room to Respond organises exercises around pausing, perspective, courage, and flexibility.`
 
-### Solution section
+### Workout sequence
 
-Headline: `Turn a goal into a routine.`
+Headline: `One workout, three moves.`
 
-Body: `A coach chooses what the client will develop. The client looks at a moment from life, checks what the reflection picked up, tries one thing changed, and sends back what they noticed.`
+Body: `Look back at what happened. Try another response. Choose what to remember and share with your coach.`
 
 Three steps:
 
-- `Set a direction` — Choose the part of life the client wants to work on.
-- `Work through a moment` — Practise with a moment from life and one changed condition.
-- `Review and continue` — Use the report to shape the next routine.
+- `Start` — Name what you felt, thought, said, and did.
+- `Try` — Change one part of the moment and respond again.
+- `Carry forward` — Keep one useful response for the next time this happens.
 
-### Buyer section
+### Coach section
 
-Headline: `Built around the coach-client relationship.`
+Headline: `Your coach chooses the focus.`
 
-Body: `The coach gives the routine its purpose. The client supplies the experience. Room to Respond helps them keep the work moving between sessions.`
+Body: `The coach notices a pattern that is getting in the way of development, sets the workout, reviews the reflection, and shapes what comes next. The client decides what fits and what to carry forward.`
 
 ### GenAI section
 
-Headline: `Now the workout can adapt to the person.`
+Headline: `A personal workout can adapt as you work through it.`
 
-Body: `GenAI can follow the client’s words, connect a moment from life to a bounded practice variation, and prepare a reflection that the coach can review. It helps with the work of adapting the exercise. The coach still sets the direction.`
+Body: `GenAI can work from the client’s own words, ask the next useful question, change one part of a scenario, and prepare a reflection for the coach. The coach sets the goal. The client decides what fits.`
 
 ### Demo section
 
-Headline: `See one routine from start to next step.`
+Headline: `Watch one workout from focus to next step.`
 
-Body: `Follow Maya’s prepared journey from a difficult review meeting to a coach response and a new routine.`
+Body: `Follow Maya’s coach-led workout: look at a difficult moment, try another response, share the reflection, and see what comes next.`
 
-Action: `Start Maya’s guided demo`
+Action: `Start Maya’s workout`
 
 ## Copy rules
 

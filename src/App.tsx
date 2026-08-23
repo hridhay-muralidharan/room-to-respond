@@ -57,6 +57,10 @@ function App() {
     return () => window.clearTimeout(timer)
   }, [hydrated, state.response, state.details, state.correction, state.threads, state.tension, state.synthesis, state.history, state.scenarioIndex, state.probe, state.simulationResponse, state.transferNote, state.journeyDraft, state.journeyModel, state.journeyMode])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [stage])
+
   const patch = (changes: Partial<PracticeState>) => setState((current) => ({ ...current, ...changes }))
 
   const prepareScenario = (index: number) => patch({

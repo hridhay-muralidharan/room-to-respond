@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type Props = { onBack: () => void }
 type DemoStep = 'context' | 'situation' | 'mapping' | 'transfer' | 'report' | 'response'
@@ -20,6 +20,10 @@ export function PractitionerWorkspace({ onBack }: Props) {
   const [step, setStep] = useState<DemoStep>('context')
   const currentIndex = steps.findIndex((item) => item.id === step)
   const next = () => setStep(steps[Math.min(currentIndex + 1, steps.length - 1)].id)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [step])
 
   return <section className="guided-demo page-narrow">
     <div className="guided-demo-heading guided-four-step-heading">

@@ -1,10 +1,10 @@
 type Props = { onBegin: () => void; onFloor: () => void; onPrivacy: () => void; onJourney: () => void; onPractitioner: () => void; hasHistory: boolean; onThreads: () => void; allComplete: boolean }
 
 const workouts = [
-  ['Pause', 'Create more space before responding', 'attention · emotion · choice'],
-  ['Perspective', 'See the story you are telling yourself', 'memory · meaning · metacognition'],
-  ['Courage', 'Say what you mean when the moment gets hard', 'values · communication · self-regulation'],
-  ['Flexibility', 'Make room for another possible response', 'imagination · foresight · learning'],
+  ['Pause', 'Make space before responding', 'attention · emotion · choice'],
+  ['Perspective', 'Notice the story in your head', 'memory · meaning · metacognition'],
+  ['Courage', 'Say what you mean when it is hard', 'values · communication · self-regulation'],
+  ['Flexibility', 'Try another way to respond', 'imagination · foresight · learning'],
 ]
 
 export function Welcome({ onPrivacy, onPractitioner }: Props) {
@@ -13,7 +13,7 @@ export function Welcome({ onPrivacy, onPractitioner }: Props) {
       <div className="landing-copy">
         <p className="kicker">Room to Respond</p>
         <h1>Give your mind<br /><em>a proper workout.</em></h1>
-        <p className="lede">A coach-led way to build the mental faculties you use in conversations, decisions, work, relationships, and unfamiliar situations.</p>
+        <p className="lede">A coach-led way to build the mental faculties you use in conversations, decisions, work, relationships, and new situations.</p>
         <div className="welcome-actions"><button className="primary-button" onClick={onPractitioner}>Try a guided workout <span>→</span></button><span className="hero-support">Maya’s session is ready to go</span></div>
       </div>
       <div className="landing-preview" aria-label="Preview of today's mental workout">

@@ -6,27 +6,27 @@ The prototype is reviewed through five roles. Each role starts from the reposito
 
 ### Goal
 
-Make the practitioner-client loop understandable and testable in one guided journey.
+Make the coach-client loop understandable and testable in one guided journey.
 
 ### Repository signals
 
-- The practitioner creates a personalised routine.
-- The client practises between sessions using a real situation and a constructed variation.
+- The coach creates a personalised routine.
+- The client practises between sessions using a moment from life and a changed version of it.
 - The client edits the model’s reflection before sharing.
-- The practitioner reviews the report and prepares the next routine.
+- The coach reviews the report and prepares the next routine.
 - The first version should prove one routine end to end.
 
 ### Product decisions
 
 - The guided demo is the primary product story.
 - The routine, not the model response, is the unit of continuity.
-- The report is the handoff between client and practitioner.
-- Practitioner feedback is the final step of the first loop.
+- The report is the handoff between client and coach.
+- Coach feedback is the final step of the first loop.
 - The prototype is a guided demo for gathering feedback, not an open self-service product.
 
 ### Success criteria
 
-A new reviewer can follow the routine from assignment to practitioner feedback and explain the value in their own words.
+A new reviewer can follow the routine from assignment to coach feedback and explain the value in their own words.
 
 ## UX Designer
 
@@ -36,12 +36,12 @@ Make each handoff clear, safe, and easy to complete.
 
 ### Journey requirements
 
-- Start with the practitioner’s purpose and the client’s goal.
+- Start with the coach’s purpose and the client’s goal.
 - Keep the client’s lived account before model interpretation.
 - Make tentative observations editable and rejectable.
 - Label constructed situations clearly.
 - Show what will be shared before submission.
-- Keep client content, model suggestions, and practitioner feedback distinct.
+- Keep client content, model suggestions, and coach feedback distinct.
 - Make the next action obvious without hiding the wider journey.
 - Preserve the same routine context as the reviewer switches roles.
 
@@ -55,8 +55,8 @@ Make each handoff clear, safe, and easy to complete.
 - constructed exercise in progress;
 - report ready to share;
 - report shared;
-- practitioner review ready;
-- practitioner feedback saved;
+- coach review ready;
+- coach feedback saved;
 - next routine in draft;
 - hosted model unavailable with a complete fixture fallback.
 
@@ -78,20 +78,20 @@ Give the journey one visual language that feels calm, human, and useful for a th
 - Use restrained borders and surfaces to separate roles and content types.
 - Use one accent consistently for active progress and actions.
 - Keep research language secondary to the human task.
-- Make the practitioner and client views feel like two sides of the same product.
+- Make the coach and client views feel like two sides of the same product.
 - Use motion only for meaningful state changes: assignment, handoff, completion, and feedback.
 
 ### Component inventory
 
 - journey header with role and routine state;
 - routine step rail;
-- practitioner routine builder;
+- coach routine builder;
 - client routine handoff;
 - lived-account editor;
 - tentative observation row;
 - constructed-situation panel;
 - report preview;
-- practitioner feedback composer;
+- coach feedback composer;
 - next-routine draft;
 - privacy and sharing boundary.
 
@@ -108,7 +108,7 @@ Make the guided journey work reliably with fixture data first and hosted inferen
 ### Technical requirements
 
 - Model the routine, participant role, current step, report, feedback, and next-routine draft as explicit state.
-- Keep practitioner and client views connected to the same seeded routine.
+- Keep coach and client views connected to the same seeded routine.
 - Make every guided transition work without an API key.
 - Keep hosted reflection behind the existing API boundary.
 - Preserve local persistence, export, reset, and import behaviour.
@@ -131,8 +131,8 @@ Make the guided demo understandable, humane, and precise at every handoff.
 - The client’s lived experience comes before model interpretation.
 - Model observations are tentative and always open to correction.
 - Constructed situations are exercises for exploration, not predictions.
-- The report belongs to the client before it is shared with the practitioner.
-- Practitioner feedback guides the next routine.
+- The report belongs to the client before it is shared with the coach.
+- Coach feedback guides the next routine.
 - The prototype is for feedback, so the reviewer should never wonder what to type or what a control will do.
 
 ### Writing decisions
@@ -141,7 +141,7 @@ Make the guided demo understandable, humane, and precise at every handoff.
 - Use “routine” for the full sequence and “exercise” for an individual step.
 - Use “lived situation” for Maya’s account and “constructed situation” for the changed-condition exercise.
 - Say what the reviewer is seeing before asking them to continue.
-- Make authorship visible: client-authored, model suggestion, and practitioner-authored.
+- Make authorship visible: client-authored, model suggestion, and coach-authored.
 - Use plain verbs: assign, open, describe, review, correct, compare, share, respond, prepare.
 - Avoid clinical labels, personality claims, diagnostic language, and inflated AI language.
 - Keep the reviewer oriented with one clear next action per step.
@@ -172,7 +172,7 @@ one routine
 → one reviewable model
 → one constructed exercise
 → one shared report
-→ one practitioner response
+→ one coach response
 → one next routine
 ```
 

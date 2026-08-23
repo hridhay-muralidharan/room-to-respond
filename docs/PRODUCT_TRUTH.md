@@ -80,7 +80,7 @@ The prototype is proving the relationship and the workflow. It is not proving cl
 
 Use concrete situations: conversations, decisions, work, relationships, conflict, change, and transitions.
 
-Use “develop mental faculties” when describing the product premise. Avoid vague phrases such as “the faculties people use to meet life.”
+Use “develop mental faculties” when describing the product premise. Name the faculties directly when the reader needs to understand the focus.
 
 Label evidence, synthesis, and hypotheses clearly in internal documents. Public copy can be simpler, but must not present a hypothesis as a market fact.
 

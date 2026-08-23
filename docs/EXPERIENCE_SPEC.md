@@ -52,19 +52,19 @@ The screen must answer: “What moment from my life am I looking at?”
 
 ### 3. Confirm the mapping
 
-The product maps possible connections to the client's words. The client keeps or questions each one and adds their own correction. The mapping remains local while the client completes the transfer exercise.
+Room to Respond reflects possible patterns from the client's words. The client keeps or questions each one and adds their own correction. The reflection stays with the client while they try another response.
 
 The screen must answer: “What fits my experience?”
 
-### 4. Complete the transfer exercise
+### 4. Try another response
 
-The product changes one condition from the lived situation and asks the client to respond before showing the comparison.
+The product changes one condition from the moment and asks the client to respond before showing the comparison.
 
 The screen must answer: “What happens when I try this with one thing changed?”
 
 ### 5. Compare and send
 
-The client compares the lived situation and transfer response, names what changed and what stayed present, and sends one combined report containing the situation, confirmed mapping, transfer response, comparison, and correction.
+The client compares the moment from life and the other response, names what changed and what stayed present, and sends one complete reflection containing the moment, the reflection they reviewed, the other response, the comparison, and their correction.
 
 The screen must answer: “What do I want my coach to see?”
 

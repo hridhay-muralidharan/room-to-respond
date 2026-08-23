@@ -6,7 +6,7 @@ The guided demo follows one complete coach-client loop in six screens. Each scre
 
 Across the last four sessions, Maya’s coach has noticed that criticism quickly makes her want to leave a conversation. The coach wants Maya to practise pausing before responding. The pause gives her room to notice the reaction, check the first story, and choose what to say next.
 
-The first workout focuses on attention, emotion awareness, self-regulation, judgment, communication, and flexibility. Maya looks at a review-meeting moment from her life, checks the possible connections, tries a changed version of the moment, compares the two responses, and sends the complete reflection to the coach. The coach responds and creates the next workout.
+The first workout focuses on attention, emotion awareness, self-regulation, judgment, communication, and flexibility. Maya looks at a review-meeting moment from her life, checks the reflection, tries a changed version of the moment, compares the two responses, and sends the complete reflection to the coach. The coach responds and creates the next workout.
 
 ## Screen 1: Coach sets the context
 
@@ -26,23 +26,23 @@ Maya sees the reason for the focus and looks at one moment from her life. The de
 
 The primary action is **See what the situation may show**.
 
-## Screen 3: Maya confirms the mapping
+## Screen 3: Maya checks the reflection
 
-The product maps possible connections to Maya’s own words. Maya can mark each connection as fitting her experience or needing more context. Her correction remains visible beside the mapping.
+Room to Respond reflects possible patterns from Maya’s own words. Maya can keep each one, reject it, or add context. Her correction remains visible beside the reflection.
 
-The confirmed mapping stays with Maya while she completes the transfer exercise. It is not sent on this screen.
+The patterns Maya keeps stay with her while she tries the changed moment. They are not sent on this screen.
 
 The primary action is **Try another response**.
 
-## Screen 4: Maya completes the transfer exercise
+## Screen 4: Maya tries another response
 
-The product changes one condition from the lived situation. Maya responds to the changed situation before seeing the comparison. This is the exercise that tests whether the reflection creates another possible response.
+Room to Respond changes one part of the moment. Maya responds to the changed situation before seeing the comparison. This helps her explore another possible response.
 
 The primary action is **Compare the two moments**.
 
 ## Screen 5: Maya compares and sends the report
 
-Maya sees the original moment beside the transfer response, names what changed and what stayed present, and sends the combined report. The report includes the lived situation, confirmed mapping, transfer response, comparison, and Maya’s correction.
+Maya sees the original moment beside her other response, names what changed and what stayed present, and sends the complete reflection. It includes the moment from her life, the reflection she reviewed, her other response, the comparison, and her correction.
 
 The primary action is **Send the complete report**.
 
@@ -55,7 +55,7 @@ The demo ends with:
 - the shared insight;
 - the coach’s response;
 - the next session focus;
-- what Maya will bring into it;
+- what Maya will practise in it;
 - what the coach will look for.
 
 ## What the demo should leave the reviewer feeling
@@ -72,7 +72,7 @@ A new reviewer should be able to answer:
 2. Why is Maya being asked to practise pausing?
 3. Which faculties does the focus involve?
 4. What moment from her life does Maya examine?
-5. Which possible connections does Maya confirm or question?
-6. What changes in the transfer exercise?
+5. Which parts of the reflection does Maya keep or correct?
+6. What changes when Maya tries another response?
 7. What does Maya send to the coach?
 8. What is the next session designed to practise?

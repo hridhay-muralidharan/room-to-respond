@@ -29,7 +29,7 @@ Show the user's original account above two or three tentative threads. Show evid
 
 Label the situation as constructed and text-first. Capture the user's response, then compare it with the lived account. Ask what is similar, different, uncertain, or not useful. Let the user stop or return without saving.
 
-### Practitioner review
+### Coach review
 
 Show the assigned routine, client account, corrections, changed-condition response, transfer note, recurring threads, and open questions for the next session. Keep client-authored material visually distinct from model suggestions. Do not show personality scores or definitive labels.
 
@@ -47,5 +47,5 @@ Explain local storage, hosted request boundaries, export, reset, deletion, and t
 - no streaks, scores, badges, or competitive framing;
 - every exercise can be skipped or stopped;
 - client sharing is explicit and reviewable;
-- practitioner assignment and review stay visible in the flow;
+- coach assignment and review stay visible in the flow;
 - mobile-first and keyboard accessible.

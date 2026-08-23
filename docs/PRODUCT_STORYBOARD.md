@@ -12,7 +12,7 @@ The coach gives the routine its purpose and boundaries. The client supplies the 
 
 The coach sees a client list, active routines, recent reflections, and open questions for the next session.
 
-For each client, the practitioner can:
+For each client, the coach can:
 
 - record the agreed goal or area of development;
 - select the faculties involved;
@@ -26,7 +26,7 @@ The first prototype uses a seeded coach and client so the workflow can be review
 
 ## Screen 2 — Create a routine
 
-The practitioner starts with a client goal, such as:
+The coach starts with a client goal, such as:
 
 - create more space before responding to criticism;
 - recognise activation earlier in a difficult conversation;
@@ -34,7 +34,7 @@ The practitioner starts with a client goal, such as:
 - practise a more direct request;
 - learn from feedback without shutting down.
 
-The practitioner selects a faculty or combination of faculties, chooses exercises, and decides how the client will report back.
+The coach selects a faculty or combination of faculties, chooses exercises, and decides how the client will report back.
 
 The first routine combines:
 
@@ -106,13 +106,13 @@ The client compares the lived situation and the changed condition:
 - What became easier or harder?
 - What did the exercise reveal about the original situation?
 - What remains open?
-- What would be useful to discuss with the practitioner?
+- What would be useful to discuss with the coach?
 
 The report contains the client's account, edited model reflection, response to the changed condition, transfer note, and a question or observation to carry into the next session.
 
 ## Screen 7 — Coach review
 
-The practitioner report view organises:
+The coach report view organises:
 
 - the routine assigned;
 - the client's original situation;
@@ -125,11 +125,11 @@ The practitioner report view organises:
 
 The coach can add a note, adjust the faculty focus, change the exercise difficulty, or create the next routine.
 
-The report supports a session. It does not replace the practitioner's relationship, judgement, or clinical responsibility.
+The report supports a session. It does not replace the coach's relationship, judgement, or clinical responsibility.
 
 ## Screen 8 — Progress across routines
 
-Over time, the practitioner and client can review:
+Over time, the coach and client can review:
 
 - situations explored;
 - faculties involved;
@@ -154,7 +154,7 @@ GenAI can provide:
 - future-consequence exploration;
 - pattern retrieval across submitted reports;
 - text and voice interaction;
-- a structured draft for practitioner review.
+- a structured draft for coach review.
 
 The coach sets the direction. The client supplies the experience and chooses what to share. The model organises and adapts the routine.
 
@@ -174,7 +174,7 @@ The category thesis separates research-backed foundations, promising mechanisms,
 
 ## Screen 11 — Privacy and coach control
 
-The product works with intimate situations, emotional responses, personal patterns, and changes across time. The client controls what becomes part of the practitioner report. The practitioner controls the routine and review layer. Hosted inference and future on-device inference have separate documented privacy properties.
+The product works with intimate situations, emotional responses, personal patterns, and changes across time. The client controls what becomes part of the coach report. The coach controls the routine and review layer. Hosted inference and future on-device inference have separate documented privacy properties.
 
 The current prototype validates the exercise, routine, reflection, safety, and distribution workflow using hosted inference. The research, validated routines, coach relationships, safety design, and distribution channels need to be ready when capable on-device models can support privacy-first personal AI products.
 

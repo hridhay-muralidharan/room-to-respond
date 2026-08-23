@@ -49,7 +49,7 @@ We can group mental faculties by the role that they play in any situation:
 - **Choose** — values, motivation, judgment, decisions, and self-regulation. Self-determination research connects autonomy, competence, and relatedness with motivation and wellbeing ([Deci, Olafsen, and Ryan](https://doi.org/10.1146/annurev-orgpsych-032516-113108)). Decision research shows that structured reflection can improve the discovery of far-sighted strategies ([Becker et al.](https://doi.org/10.1017/jdm.2023.16)).
 - **Adapt** — cognitive flexibility, imagination, foresight, feedback, and learning. Executive-function research identifies flexibility as a core capacity, while prospection research connects imagining possible futures with planning and action ([Diamond](https://doi.org/10.1146/annurev-psych-113011-143750); [Szpunar](https://pmc.ncbi.nlm.nih.gov/articles/PMC4074678/)).
 
-A mental workout can follow a moment from perception through action and learning and move across all 4 groups. Room to Respond brings the relevant exercises together into a practical routine for a client to exercise their mental faculties.
+A single workout can move across all four groups, from noticing what is happening to choosing a response and learning from it. Room to Respond brings the relevant exercises together into one practical routine for a client to develop their mental faculties.
 
 ## Prototype: one coach-led mental workout
 
@@ -139,6 +139,7 @@ Room to Respond is a reflection and exploration product. Therapy, diagnosis, cri
 - [Product name review](docs/PRODUCT_NAME_REVIEW.md)
 - [Product naming research](docs/NAME_RESEARCH.md)
 - [Architecture](docs/ARCHITECTURE.md)
+- [Reusable review playbook](docs/REUSABLE_REVIEW_PLAYBOOK.md)
 
 ## Run locally
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 type Props = { onBack: () => void }
 type DemoStep = 'context' | 'situation' | 'mapping' | 'transfer' | 'report' | 'response'
@@ -18,11 +18,13 @@ const livedAccount = 'In the review meeting, my manager pointed out that the req
 
 export function PractitionerWorkspace({ onBack }: Props) {
   const [step, setStep] = useState<DemoStep>('context')
+  const stageRef = useRef<HTMLDivElement>(null)
   const currentIndex = steps.findIndex((item) => item.id === step)
   const next = () => setStep(steps[Math.min(currentIndex + 1, steps.length - 1)].id)
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    if (step === 'context') return
+    stageRef.current?.scrollIntoView({ block: 'start' })
   }, [step])
 
   return <section className="guided-demo page-narrow">
@@ -41,7 +43,7 @@ export function PractitionerWorkspace({ onBack }: Props) {
       <div className="guided-local-progress"><strong>Step {currentIndex + 1} of {steps.length}</strong><span>{steps[currentIndex].label}</span></div>
     </div>
 
-    <div className="guided-demo-stage guided-four-step-stage">
+    <div ref={stageRef} className="guided-demo-stage guided-four-step-stage">
       {step === 'context' && <ContextStep onNext={next} />}
       {step === 'situation' && <SituationStep onNext={next} />}
       {step === 'mapping' && <MappingStep onNext={next} />}

@@ -36,6 +36,7 @@ const initialState: PracticeState = {
 function App() {
   const [state, setState] = useState<PracticeState>(initialState)
   const [hydrated, setHydrated] = useState(false)
+  const [privacyReturnStage, setPrivacyReturnStage] = useState<Stage>('welcome')
   const { stage, scenarioIndex, history } = state
   const scenario = scenarios[scenarioIndex]
   const profileSynthesis = state.synthesis ?? fallbackSynthesis(history)
@@ -141,6 +142,11 @@ function App() {
   }
 
   const setStage = (nextStage: Stage) => patch({ stage: nextStage, selectedReflectionId: nextStage === 'threads' ? null : state.selectedReflectionId })
+  const openPrivacy = () => {
+    setPrivacyReturnStage(stage)
+    patch({ stage: 'privacy' })
+  }
+  const closePrivacy = () => setStage(privacyReturnStage)
   const openFloor = () => patch({ stage: 'floor' })
   const openThreads = () => patch({ stage: 'threads', selectedReflectionId: null })
   const openJourney = () => patch({ stage: 'journey' })
@@ -160,10 +166,10 @@ function App() {
   const backFromThreads = () => state.selectedReflectionId === null ? setStage('review') : patch({ selectedReflectionId: null })
 
   return <div className="app-shell">
-    <header className="topbar"><button className="wordmark" onClick={() => setStage('welcome')} aria-label="Go to home"><span className="wordmark-mark">RR</span><span>Room to Respond</span></button><nav className="topnav" aria-label="Primary navigation"><button className={stage === 'practitioner' ? 'active' : ''} onClick={openPractitioner}>Guided demo</button><button onClick={() => setStage('privacy')}>Privacy</button></nav><div className="storage-status"><span className="status-dot" /> Review prototype</div></header>
+    <header className="topbar"><button className="wordmark" onClick={() => setStage('welcome')} aria-label="Go to home"><span className="wordmark-mark">RR</span><span>Room to Respond</span></button><nav className="topnav" aria-label="Primary navigation"><button className={stage === 'practitioner' ? 'active' : ''} aria-current={stage === 'practitioner' ? 'page' : undefined} onClick={openPractitioner}>Guided demo</button><button className={stage === 'privacy' ? 'active' : ''} aria-current={stage === 'privacy' ? 'page' : undefined} onClick={openPrivacy}>Privacy</button></nav><div className="storage-status"><span className="status-dot" /> Review prototype</div></header>
     {progress > 0 && <div className="progress-wrap" aria-label={`Step ${progress} of 2`}><div className="progress-label"><span>{stage === 'explore' ? 'Model-guided exploration' : `Practice ${Math.min(scenarioIndex + 1, scenarios.length)} of ${scenarios.length}`}</span><span>{stage === 'explore' ? 'Simulation and transfer' : progress === 1 ? 'Lived account' : 'Model review'}</span></div><div className="progress-line"><span style={{ width: `${progress * 50}%` }} /></div></div>}
     <main>
-      {stage === 'welcome' && <Welcome onBegin={isComplete ? openThreads : openReflect} onFloor={openFloor} onPrivacy={() => setStage('privacy')} onPractitioner={openPractitioner} hasHistory={history.length > 0} onThreads={openThreads} onJourney={openJourney} allComplete={isComplete} />}
+      {stage === 'welcome' && <Welcome onBegin={isComplete ? openThreads : openReflect} onFloor={openFloor} onPrivacy={openPrivacy} onPractitioner={openPractitioner} hasHistory={history.length > 0} onThreads={openThreads} onJourney={openJourney} allComplete={isComplete} />}
       {stage === 'floor' && <WorkoutFloor onStart={openReflect} onBack={() => setStage('welcome')} hasHistory={history.length > 0} onModel={openThreads} />}
       {stage === 'practitioner' && <PractitionerWorkspace onBack={() => setStage('welcome')} />}
       {stage === 'respond' && <Respond response={state.response} setResponse={(response) => patch({ response })} details={state.details} setDetails={(details) => patch({ details })} scenario={scenario} showContext={state.showContext} setShowContext={(showContext) => patch({ showContext })} onSubmit={submitResponse} isReflecting={state.isReflecting} />}
@@ -171,9 +177,9 @@ function App() {
       {stage === 'threads' && <Threads threads={state.threads} synthesis={profileSynthesis} history={history} selectedReflectionId={state.selectedReflectionId} isComplete={isComplete} onBack={backFromThreads} onNext={nextPractice} onOpenScenario={(id) => patch({ selectedReflectionId: id })} />}
       {stage === 'explore' && state.probe && <Explore probe={state.probe} response={state.response} simulationResponse={state.simulationResponse} setSimulationResponse={(simulationResponse) => patch({ simulationResponse })} transferNote={state.transferNote} setTransferNote={(transferNote) => patch({ transferNote })} onSave={keepReflection} />}
       {stage === 'journey' && <Journey draft={state.journeyDraft} setDraft={(journeyDraft) => patch({ journeyDraft })} mode={state.journeyMode} setMode={(journeyMode: JourneyMode) => patch({ journeyMode, journeyModel: undefined })} model={state.journeyModel} isReflecting={state.isReflecting} apiError={state.apiError} onGenerate={generateJourney} onBack={() => setStage('welcome')} />}
-      {stage === 'privacy' && <Privacy onBack={() => setStage('welcome')} onReset={reset} onExport={exportData} onImport={importData} />}
+      {stage === 'privacy' && <Privacy onBack={closePrivacy} onReset={reset} onExport={exportData} onImport={importData} />}
     </main>
-    {stage !== 'welcome' && stage !== 'privacy' && <footer className="practice-footer"><span>Your words stay yours.</span><button onClick={() => setStage('privacy')}>View data controls</button></footer>}
+    {stage !== 'welcome' && stage !== 'privacy' && <footer className="practice-footer"><span>Your words stay yours.</span><button onClick={openPrivacy}>View data controls</button></footer>}
   </div>
 }
 

@@ -58,7 +58,7 @@ Make each handoff clear, safe, and easy to complete.
 - coach review ready;
 - coach feedback saved;
 - next routine in draft;
-- hosted model unavailable with a complete fixture fallback.
+- the seeded guided demo works without an API key or personal input.
 
 ### Success criteria
 
@@ -103,16 +103,14 @@ The interface communicates continuity before the reviewer reads every word. The 
 
 ### Goal
 
-Make the guided journey work reliably with fixture data first and hosted inference as an optional enhancement.
+Make the seeded guided journey work reliably as a review prototype.
 
 ### Technical requirements
 
 - Model the routine, participant role, current step, report, feedback, and next-routine draft as explicit state.
 - Keep coach and client views connected to the same seeded routine.
-- Make every guided transition work without an API key.
-- Keep hosted reflection behind the existing API boundary.
-- Preserve local persistence, export, reset, and import behaviour.
-- Keep client sharing explicit in the local prototype state.
+- Make every guided transition work without an API key or personal input.
+- Keep the seeded coach-client handoff explicit in the local prototype state.
 - Do not commit private autobiographical content or credentials.
 - Keep the guided state explicit so future product work can later support real links, permissions, authentication, and secure sharing.
 

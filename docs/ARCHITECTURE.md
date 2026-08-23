@@ -1,27 +1,30 @@
 # Architecture
 
-Room to Respond is organised around a coach routine → client practice → reflection → coach review loop.
+Room to Respond is a review prototype built around one seeded coach-led workout.
 
-## Layers
+## Runtime surfaces
 
-- `src/domain/` contains scenarios, typed experience/model records, probe fixtures, and deterministic fallback logic.
-- `src/lib/storage.ts` owns local persistence and import/export normalization.
-- `src/lib/reflection.ts` owns the client boundary to `/api/reflect`.
-- `api/reflect.ts` is the hosted model boundary for a single lived situation and returns structured reflection threads, tensions, synthesis, and one probe.
-- `api/journey.ts` is the hosted model boundary for a private long-form account and returns a chronological, faculty-linked evolution model and editable account draft.
-- `src/components/PractitionerWorkspace.tsx` renders the seeded practitioner routine builder, client routine, and assignment/report handoff.
-- `src/components/` renders the lived account, model review, constructed exploration, transfer review, training record, long-form map, practitioner workspace, and privacy surfaces.
+- `src/App.tsx` owns the three top-level surfaces: landing page, guided demo, and privacy boundary.
+- `src/components/Welcome.tsx` renders the product story and the entry points into the guided demo and privacy boundary.
+- `src/components/GuidedDemo.tsx` renders the complete six-step Maya workout, including the orientation screen before the workout begins.
+- `src/components/Privacy.tsx` explains the privacy and safety boundary for the seeded review prototype.
+- `src/styles.css` contains the visual system for the landing page, guided demo, navigation, and responsive states.
 
-## State transitions
+## Guided demo state
 
-1. The coach creates or selects a routine for a client.
-2. The client starts with a moment from their life and adds optional structured details.
-3. The model proposes evidence-linked threads and a constructed probe.
-4. The client corrects the model and may try the probe.
-5. The client responds to the constructed situation.
-6. The transfer view compares the two responses and creates a report.
-7. The coach reviews the reflection and prepares the next routine.
+The demo keeps one local state value: the current screen. The six workout screens are:
 
-## Compatibility
+1. coach sets the focus;
+2. Maya looks at a moment from her life;
+3. Maya checks the reflection;
+4. Maya tries another response;
+5. Maya reviews and sends the reflection;
+6. the coach responds and sets the next workout.
 
-The browser key remains `room-to-respond-demo`. Older practice exports remain readable because new fields are optional. Personal narratives and hosted model requests are not committed to the repository. The current practitioner workspace is a seeded prototype; client identity, authentication, permissions, secure sharing, and server-side reports remain product work for a production deployment.
+The orientation screen explains the journey before the first workout screen and does not count as an additional workout step. All content is seeded so a reviewer can complete the journey without entering personal information or configuring an API key.
+
+## Product boundary
+
+This branch contains the guided review prototype. It does not include the earlier self-service reflection flow, long-form account mapper, hosted model routes, local practice history, or client account system. Those are future product work and should be reintroduced only when they have a defined place in the coach-led product model.
+
+Production work will need explicit identity, permissions, secure sharing, storage, model routing, deletion, and recovery decisions. None of those are implied by this seeded demo.

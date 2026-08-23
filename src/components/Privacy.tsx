@@ -1,7 +1,15 @@
-import type { ChangeEvent } from 'react'
+type Props = { onBack: () => void }
 
-type Props = { onBack: () => void; onReset: () => void; onExport: () => void; onImport: (event: ChangeEvent<HTMLInputElement>) => void }
-
-export function Privacy({ onBack, onReset, onExport, onImport }: Props) {
-  return <section className="privacy-page page-narrow"><button className="back-button" onClick={onBack}>← Back</button><p className="kicker">Privacy and safety</p><h2>A practice should feel private.</h2><p className="privacy-lede">Client reflections live in this browser until the client chooses to request model help or include material in a coach report. The coach-client relationship remains human-led, with clear control over what is shared and reviewed.</p><div className="privacy-list"><div><span>01</span><div><h3>Local by default</h3><p>Your reflection draft, model, and history are stored in browser storage on this device. Hosted deployments may have infrastructure-level access to requests.</p></div></div><div><span>02</span><div><h3>Sharing stays explicit</h3><p>The AI proposes interpretations and constructed probes. The client can accept, revise, reject, skip, or leave them unresolved before choosing what enters a coach report.</p></div></div><div><span>03</span><div><h3>Support stays human-led</h3><p>Therapy, coaching, diagnosis, risk assessment, crisis support, treatment recommendations, and care decisions belong with qualified professionals and services. This product supports observation, practice, and preparation.</p></div></div></div><div className="privacy-actions"><button className="secondary-button" onClick={onExport}>Export my practice</button><label className="secondary-button file-button">Import practice<input type="file" accept="application/json,.json" onChange={onImport} /></label><button className="danger-button" onClick={onReset}>Delete local practice</button></div></section>
+export function Privacy({ onBack }: Props) {
+  return <section className="privacy-page page-narrow">
+    <button className="back-button" onClick={onBack}>← Back</button>
+    <p className="kicker">Privacy and safety</p>
+    <h2>A practice should feel private.</h2>
+    <p className="privacy-lede">Room to Respond is designed for intimate moments, personal patterns, and reflections that a client may want to discuss with a coach. The coach-client relationship remains human-led.</p>
+    <div className="privacy-list">
+      <div><span>01</span><div><h3>What this demo contains</h3><p>This guided demo uses fictional, seeded content. It does not ask the reviewer to enter a personal situation or create an account.</p></div></div>
+      <div><span>02</span><div><h3>What the product is designed for</h3><p>A future product would give the client control over what is stored, what is shared with the coach, and what is sent for model assistance.</p></div></div>
+      <div><span>03</span><div><h3>Support stays human-led</h3><p>Therapy, coaching, diagnosis, risk assessment, crisis support, treatment recommendations, and care decisions belong with qualified professionals and services.</p></div></div>
+    </div>
+  </section>
 }

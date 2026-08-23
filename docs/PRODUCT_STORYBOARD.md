@@ -176,7 +176,7 @@ The category thesis separates research-backed foundations, promising mechanisms,
 
 The product works with intimate situations, emotional responses, personal patterns, and changes across time. The client controls what becomes part of the coach report. The coach controls the routine and review layer. Hosted inference and future on-device inference have separate documented privacy properties.
 
-The current prototype validates the exercise, routine, reflection, safety, and distribution workflow using hosted inference. The research, validated routines, coach relationships, safety design, and distribution channels need to be ready when capable on-device models can support privacy-first personal AI products.
+The current prototype validates the coach-led exercise, routine, reflection, safety, and handoff through seeded content. The research, validated routines, coach relationships, safety design, and distribution channels need to be ready when capable on-device models can support privacy-first personal AI products.
 
 ## First version
 

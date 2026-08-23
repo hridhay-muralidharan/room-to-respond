@@ -19,28 +19,28 @@ The reviewer should be able to answer:
 
 Failure condition: the reviewer describes it as a chatbot, journaling app, generic self-help tool, or AI therapist.
 
-### Routine setup
+### Guided workout context
 
 The reviewer should be able to answer:
 
 - What is being exercised?
 - Why was this routine chosen?
-- What will the client bring back?
+- What will the client share with the coach?
 
 Failure condition: the routine feels like a generic prompt list with no coach direction.
 
-### Client exercise
+### Client reflection
 
 The reviewer should be able to answer:
 
 - What part is the client's real experience?
-- What part is the model's suggestion?
-- How can the client correct the suggestion?
-- What is the purpose of the constructed situation?
+- What part is Room to Respond's suggestion?
+- How can Maya correct the reflection?
+- What is the purpose of trying another response?
 
 Failure condition: the model appears to be diagnosing, profiling, or speaking with more authority than the client.
 
-### Report and handoff
+### Reflection and handoff
 
 The reviewer should be able to answer:
 
@@ -87,13 +87,13 @@ Does the hierarchy make the story legible? Does the visual system distinguish th
 
 ### Full-stack developer
 
-Does the implementation support the complete seeded journey reliably, with a fixture fallback, accessible controls, and a production-quality build?
+Does the implementation support the complete seeded journey reliably, with accessible controls and a production-quality build?
 
 ## Release gates
 
 The prototype can be deployed for review only when:
 
-- the eight-step guided journey is complete;
+- the six-step guided journey is complete, with orientation before it begins;
 - every step has seeded content;
 - the landing page and guided demo tell the same product story;
 - the reviewer can identify the coach-client handoff;

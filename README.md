@@ -162,18 +162,14 @@ Room to Respond is a reflection and exploration product. Therapy, diagnosis, cri
 - [Human Faculties Map](docs/HUMAN_FACULTIES_MAP.md)
 - [Product storyboard](docs/PRODUCT_STORYBOARD.md)
 - [Guided demo journey](docs/GUIDED_DEMO_JOURNEY.md)
-- [Guided demo storyboard v2](docs/GUIDED_DEMO_STORYBOARD_V2.md)
 - [Landing-page copy direction](docs/LANDING_PAGE_COPY_DIRECTION.md)
 - [Narrative model selection](docs/NARRATIVE_MODEL_SELECTION.md)
 - [Prototype role lenses](docs/PROTOTYPE_ROLE_LENSES.md)
-- [UX writing review](docs/UX_WRITING_REVIEW.md)
-- [Product thesis](docs/PRODUCT_THESIS.md)
 - [Target audience](docs/TARGET_AUDIENCE.md)
 - [Self-model research basis](docs/SELF_MODEL_RESEARCH.md)
 - [Modern life and mental faculties](docs/MODERN_LIFE_AND_MENTAL_FACULTIES.md)
 - [Professional journey model](docs/PROFESSIONAL_JOURNEY_MODEL.md)
 - [Agent model](docs/AGENT_MODEL.md)
-- [Frontend journey](docs/FRONTEND_JOURNEY.md)
 - [Lived-to-constructed journey](docs/SCENARIO_JOURNEY.md)
 - [Privacy and safety](docs/PRIVACY_AND_SAFETY.md)
 - [Evaluation plan](docs/EVALUATION_PLAN.md)
@@ -190,7 +186,7 @@ npm install
 npm run dev
 ```
 
-The app works with a fixture fallback by default. To enable the hosted model route, copy `.env.example` to `.env`, add `OPENAI_API_KEY`, and restart the dev server. The key is read only by `api/reflect.ts`.
+The review prototype uses seeded content and does not require an API key.
 
 ```bash
 npm run build

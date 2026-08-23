@@ -53,7 +53,7 @@ Room to Respond is a reflection and exploration product. Therapy, diagnosis, ris
 
 Related documents:
 
-- [Product thesis](PRODUCT_THESIS.md)
+- [Product truth](PRODUCT_TRUTH.md)
 - [Self-model research basis](SELF_MODEL_RESEARCH.md)
 - [Privacy and safety](PRIVACY_AND_SAFETY.md)
 - [Evaluation plan](EVALUATION_PLAN.md)

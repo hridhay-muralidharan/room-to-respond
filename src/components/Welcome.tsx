@@ -1,4 +1,4 @@
-type Props = { onBegin: () => void; onFloor: () => void; onPrivacy: () => void; onJourney: () => void; onPractitioner: () => void; hasHistory: boolean; onThreads: () => void; allComplete: boolean }
+type Props = { onPrivacy: () => void; onGuidedDemo: () => void }
 
 const workouts = [
   ['Pause', 'Make space before responding', 'attention · emotion · choice'],
@@ -7,14 +7,14 @@ const workouts = [
   ['Flexibility', 'Try another way to respond', 'imagination · foresight · learning'],
 ]
 
-export function Welcome({ onPrivacy, onPractitioner }: Props) {
+export function Welcome({ onPrivacy, onGuidedDemo }: Props) {
   return <section className="landing-page">
     <div className="landing-hero page-grid">
       <div className="landing-copy">
         <p className="kicker">Room to Respond</p>
         <h1>Give your mind<br /><em>a proper workout.</em></h1>
         <p className="lede">A coach-led way to build the mental faculties you use in conversations, decisions, work, relationships, and new situations.</p>
-        <div className="welcome-actions"><button className="primary-button" onClick={onPractitioner}>Try a guided workout <span>→</span></button><span className="hero-support">Maya’s session is ready to go</span></div>
+        <div className="welcome-actions"><button className="primary-button" onClick={onGuidedDemo}>Try a guided workout <span>→</span></button><span className="hero-support">Maya’s session is ready to go</span></div>
       </div>
       <div className="landing-preview" aria-label="Preview of today's mental workout">
         <div className="preview-topline"><span>Maya’s workout</span><span>08 min</span></div>
@@ -39,7 +39,7 @@ export function Welcome({ onPrivacy, onPractitioner }: Props) {
     <div className="landing-section landing-why page-grid"><div className="landing-section-title"><p className="kicker">Why a gym for the mind?</p><h2>Modern life changes what we practise.</h2></div><div className="landing-section-copy"><p>Cars, elevators, and machines reduced some of the physical movement built into daily life. This contributed to physical inactivity. <a href="https://www.who.int/publications/i/item/9789240059153" target="_blank" rel="noreferrer">WHO Global status report</a>.</p><p>Digital life also changes the demands placed on attention, emotion regulation, memory, and decision-making. Room to Respond brings exercises for these faculties into one practical workout.</p></div></div>
 
     <div className="landing-genai page-grid"><div><p className="kicker">What GenAI adds</p><h2>A personal workout can adapt as you work through it.</h2></div><div><p>GenAI can work from the client’s own words, ask the next useful question, change one part of a scenario, and prepare a reflection for the coach.</p><p>The coach sets the goal. The client decides what fits.</p></div></div>
-    <div className="landing-demo page-grid"><div><p className="kicker">See the whole loop</p><h2>Watch one workout from focus to next step.</h2><p>Follow Maya’s coach-led workout: look at a difficult moment, try another response, share the reflection, and see what comes next.</p></div><button className="primary-button" onClick={onPractitioner}>Start Maya’s workout <span>→</span></button></div>
+    <div className="landing-demo page-grid"><div><p className="kicker">See the whole loop</p><h2>Watch one workout from focus to next step.</h2><p>Follow Maya’s coach-led workout: look at a difficult moment, try another response, share the reflection, and see what comes next.</p></div><button className="primary-button" onClick={onGuidedDemo}>Start Maya’s workout <span>→</span></button></div>
     <button className="landing-privacy" onClick={onPrivacy}>Read the privacy and safety boundary →</button>
   </section>
 }

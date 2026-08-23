@@ -16,7 +16,7 @@ const faculties = ['Attention', 'Emotion awareness', 'Self-regulation', 'Judgmen
 
 const livedAccount = 'In the review meeting, my manager pointed out that the requirements document still had gaps. I felt exposed and immediately started thinking that I was failing again. I answered briefly, said I would fix it, and then wanted to leave the conversation. Later, I kept replaying the criticism and felt embarrassed that I had not explained what I was struggling with.'
 
-export function PractitionerWorkspace({ onBack }: Props) {
+export function GuidedDemo({ onBack }: Props) {
   const [step, setStep] = useState<DemoStep>('intro')
   const stageRef = useRef<HTMLDivElement>(null)
   const currentIndex = steps.findIndex((item) => item.id === step)
@@ -155,7 +155,7 @@ function ResponseStep({ onRestart }: { onRestart: () => void }) {
     <StepIntro label="06 · Coach responds" title="Choose what to practise next." copy="The coach reviews Maya’s account and her other response, then sets the next focus." />
     <div className="response-workspace">
       <div className="response-confirmed"><span className="section-label">What Maya noticed</span><h4>She can stay for one more exchange.</h4><p>In the changed version of the meeting, having more time afterward made it easier to stay with the conversation instead of leaving straight away.</p><div className="response-evidence"><small>Another response she could try</small><strong>“Which part should I fix first? I’ll send an updated version tomorrow.”</strong></div><span className="guided-authorship">Shared by Maya</span></div>
-      <div className="response-practitioner"><span className="section-label">Coach’s response</span><blockquote>“Next time you notice the urge to leave, stay for one more exchange. Ask one clear question before you go. You do not have to solve everything in that moment.”</blockquote><span className="guided-authorship">Written by the coach</span></div>
+      <div className="response-coach"><span className="section-label">Coach’s response</span><blockquote>“Next time you notice the urge to leave, stay for one more exchange. Ask one clear question before you go. You do not have to solve everything in that moment.”</blockquote><span className="guided-authorship">Written by the coach</span></div>
     </div>
     <div className="next-session-card"><div><span className="section-label">Next session</span><h4>Stay for one more exchange</h4><p>Practise noticing the urge to leave, asking one clear question, and agreeing on what happens next.</p></div><div className="next-session-details"><small>Focus</small><strong>Pause, then ask one clear question</strong><small>Try it when</small><strong>Someone points out a problem</strong><small>Look for</small><strong>One question before leaving</strong></div></div>
     <div className="guided-complete"><strong>The loop is complete.</strong><p>Focus → moment → another response → next workout.</p><button className="secondary-button" onClick={onRestart}>Run the demo again</button></div>

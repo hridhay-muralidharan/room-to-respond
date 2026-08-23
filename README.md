@@ -2,7 +2,7 @@
 
 Room to Respond is a research prototype for therapists and life coaches to create personalised mental workout routines for clients. Clients practise between sessions by examining moments from their lives, trying guided scenarios, using text and voice, and sharing reviewable reflections with their coach.
 
-We can understand Room to Respond through a parallel with physical activity. Modern life reduced some of the physical activity built into daily life. Cars replaced some walking. Elevators replaced some climbing. Machines reduced some manual work. This contributed to physical inactivity. ([WHO Global status report on physical activity](https://www.who.int/publications/i/item/9789240059153)).
+We can understand Room to Respond through a parallel with physical activity. Modern life reduced some of the physical activity built into daily life: cars replaced some walking, elevators some climbing, and machines some manual work. ([WHO Global status report on physical activity](https://www.who.int/publications/i/item/9789240059153)).
 
 The challenges arising out of physical inactivity have led us to dedicated workout routines. For example, physical gyms provide physical workouts for physical muscles. They bring different exercises together in a practical routine. What if we had a gym for the mind? Room to Respond is such a gym.
 
@@ -15,7 +15,7 @@ Modern life also changes how people use their minds:
 - search, recommendation systems, and generative AI make it easier to offload remembering, comparing, drafting, and deciding. Research on cognitive offloading shows that external tools change the demands placed on memory and metacognition ([review](https://pmc.ncbi.nlm.nih.gov/articles/PMC9971128/));
 - faster communication and more complex work create more frequent social and practical judgments.
 
-We’ve attempted to address many of these challenges through therapy. However, mental health also has a development side to it. People can work with therapists and life coaches to strengthen the mental faculties: attention, emotion awareness, self-regulation, perspective, motivation, judgment, communication, flexibility, foresight, and learning. With GenAI shifting skill development toward subtler skills such as judgment, taste, self-awareness, communication, emotional regulation, and sense-making, my hypothesis is that people will increasingly place more emphasis on active development of mental faculties. More details can be found in [From mental healthcare to mental fitness](docs/MENTAL_FITNESS_CATEGORY_THESIS.md).
+We’ve attempted to address many of these challenges through therapy. Mental health also has a development side to it. People can work with therapists and life coaches to strengthen the mental faculties: attention, emotion awareness, self-regulation, perspective, motivation, judgment, communication, flexibility, foresight, and learning. With GenAI shifting skill development toward subtler skills such as judgment, taste, self-awareness, communication, emotional regulation, and sense-making, my hypothesis is that people will increasingly place more emphasis on active development of mental faculties. More details can be found in [From mental healthcare to mental fitness](docs/MENTAL_FITNESS_CATEGORY_THESIS.md).
 
 ## Target Audience
 
@@ -97,13 +97,13 @@ The launch standard includes local encryption, deletion, recovery, sharing, and 
 
 The go-to-market trigger is therefore a hypothesis: launch the privacy-first version when on-device models can provide the reasoning quality needed for the workouts and the full privacy system has been validated.
 
-The work required before that point is set out in the product roadmap below.
+The work required before that point is set out in the go-to-market plan below.
 
-## Product roadmap
+## Go-to-Market Plan
 
 GenAI has reduced the time and cost of turning product ideas into working software. The advantage now comes from knowing what is worth building, designing it with care, and earning trust and distribution.
 
-Room to Respond’s roadmap prioritises the depth needed to make those decisions. A feature can be copied. Research-backed product judgment, validated workouts, a clear point of view, and trusted relationships take longer to build.
+The plan prioritises the depth needed to make those decisions. A feature can be copied. Research-backed product judgment, validated workouts, a clear point of view, and trusted relationships take longer to build.
 
 ### Research
 
@@ -145,7 +145,7 @@ Room to Respond’s roadmap prioritises the depth needed to make those decisions
 - learn which channels can bring the product into trusted coach-client relationships;
 - prepare the product, partnerships, and deployment systems so the opportunity can be seized when the on-device checkpoint is reached.
 
-Today’s prototype is an early product and research artefact within this roadmap. It demonstrates the coach-led interaction and creates a foundation for the research, validation, and product development work ahead.
+Today’s prototype is an early product and research artefact within this plan. It demonstrates the coach-led interaction and creates a foundation for the research, validation, and product development work ahead.
 
 ## Boundaries
 

@@ -85,11 +85,15 @@ GenAI marks an inflection point because it can build a workout around the client
 
 The client supplies the experience, reviews the reflection, and decides what to carry forward. The coach sets the direction and reviews the reflection.
 
-## Privacy: the guardrail and the roadblock
+## Privacy: Guardrail, Roadblock and Opportunity
 
 Privacy is central because the product works with intimate situations, emotional responses, personal patterns, and changes across time. A hosted product sends that material through an application operator and a model provider. Users may reasonably question who can retain it, access it, use it to improve systems, or connect it with their identity.
 
-On-device inference opens the path to privacy-first personal AI products. Personal memory and reasoning can stay on the user's device. The launch standard includes local encryption, deletion, recovery, sharing, and device security alongside capable reasoning.
+On-device inference opens the path to privacy-first personal AI products. Personal memory and reasoning can stay on the user's device. This creates an opportunity to bring Room to Respond into the moments where a person needs it, on demand, as they unfold.
+
+With the user's permission, the product can draw context from the other AI tools they use across text, voice, and video. It can surface patterns while the conversation or decision is still happening, help the person find a better response, and capture richer notes for discussion with their coach afterward. This moves the workout closer to the moment itself, when the learning can be used.
+
+The launch standard includes local encryption, deletion, recovery, sharing, and device security alongside capable reasoning.
 
 The go-to-market trigger is therefore a hypothesis: launch the privacy-first version when on-device models can provide the reasoning quality needed for the workouts and the full privacy system has been validated.
 

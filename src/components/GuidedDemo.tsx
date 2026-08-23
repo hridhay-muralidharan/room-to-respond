@@ -23,7 +23,10 @@ export function GuidedDemo({ onBack }: Props) {
   const next = () => setStep(step === 'intro' ? 'context' : steps[Math.min(currentIndex + 1, steps.length - 1)].id)
 
   useEffect(() => {
-    if (step === 'intro') return
+    if (step === 'intro') {
+      window.scrollTo(0, 0)
+      return
+    }
     stageRef.current?.scrollIntoView({ block: 'start' })
   }, [step])
 

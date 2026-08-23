@@ -32,8 +32,8 @@ export function PractitionerWorkspace({ onBack }: Props) {
       <div>
         <button className="back-button" onClick={onBack}>← Home</button>
         <p className="kicker">Maya’s session · {step === 'intro' ? 'Guided demo' : steps[currentIndex].label}</p>
-        <h2>{step === 'intro' ? <>See how it works.<br /><em>Then follow Maya’s workout.</em></> : <>Notice the pattern.<br /><em>Practise another response.</em></>}</h2>
-        <p className="guided-demo-lede">{step === 'intro' ? 'A prepared coach–client journey from a development focus to the next workout.' : 'A coach sets the focus. Maya walks through a moment from her life, reviews what it may show, tries another response, and carries the learning into the next session.'}</p>
+        <h2>{step === 'intro' ? <>See how it works.<br /><em>Follow Maya’s workout.</em></> : <>Notice the pattern.<br /><em>Practise another response.</em></>}</h2>
+        <p className="guided-demo-lede">{step === 'intro' ? 'Follow Maya and her coach from the first step to the next workout.' : 'A coach sets the focus. Maya walks through a moment from her life, reviews what it may show, tries another response, and carries the learning into the next session.'}</p>
       </div>
       <div className="guided-demo-client"><span>DEMO CLIENT</span><strong>Maya R.</strong><p>Four sessions into work on responding to criticism.</p></div>
     </div>
@@ -61,13 +61,13 @@ function ContinueButton({ children, onNext, disabled = false }: { children: stri
 
 function IntroStep({ onNext }: { onNext: () => void }) {
   return <>
-    <StepIntro label="Before you begin" title="See one complete mental workout." copy="Maya’s coach has noticed that criticism quickly makes her want to leave a conversation. In this demo, you’ll see how the coach turns that pattern into a focused workout, how Maya works through it, and how the coach responds to what she learns." />
+    <StepIntro label="Before you begin" title="Follow one workout from start to finish." copy="Maya’s coach wants her to practise pausing when criticism feels threatening. You’ll see the coach set the focus, Maya work through a moment from her life, and the coach respond to what she learns." />
     <div className="demo-orientation">
-      <div className="demo-orientation-roles"><span className="section-label">Who does what</span><div><strong>Coach</strong><p>Sets the focus and shapes the next workout.</p></div><div><strong>Maya</strong><p>Examines a moment from her life and tries another response.</p></div><div><strong>Room to Respond</strong><p>Reflects the work back and prepares the handoff.</p></div></div>
-      <div className="demo-orientation-sequence"><span className="section-label">What you will see</span><ol><li>Coach sets the focus</li><li>Maya looks at a moment from her life</li><li>Maya checks the reflection</li><li>Maya tries another response</li><li>Maya sends the reflection to the coach</li><li>Coach shapes what comes next</li></ol></div>
+      <div className="demo-orientation-roles"><span className="section-label">Who does what</span><div><strong>Coach</strong><p>Chooses what Maya will practise.</p></div><div><strong>Maya</strong><p>Looks at what happened and tries another response.</p></div><div><strong>Room to Respond</strong><p>Helps Maya reflect and share the work.</p></div></div>
+      <div className="demo-orientation-sequence"><span className="section-label">What you’ll see</span><ol><li>The coach sets the focus</li><li>Maya looks at what happened</li><li>Maya checks the reflection</li><li>Maya tries another response</li><li>Maya sends it to her coach</li><li>The coach responds</li></ol></div>
     </div>
-    <div className="demo-orientation-note"><strong>This is a prepared demo.</strong><span>Nothing to write. Follow the journey and select Continue when you are ready.</span></div>
-    <div className="guided-action-row"><ContinueButton onNext={onNext}>Start with the coach’s focus</ContinueButton></div>
+    <div className="demo-orientation-note"><strong>This is a guided demo.</strong><span>Nothing to write. Just follow along.</span></div>
+    <div className="guided-action-row"><ContinueButton onNext={onNext}>Start the workout</ContinueButton></div>
   </>
 }
 

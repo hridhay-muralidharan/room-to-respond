@@ -32,8 +32,8 @@ export function PractitionerWorkspace({ onBack }: Props) {
       <div>
         <button className="back-button" onClick={onBack}>← Home</button>
         <p className="kicker">Maya’s session · {step === 'intro' ? 'Guided demo' : steps[currentIndex].label}</p>
-        <h2>Notice the pattern.<br /><em>Practise another response.</em></h2>
-        <p className="guided-demo-lede">A coach sets the focus. Maya walks through a moment from her life, reviews what it may show, tries another response, and carries the learning into the next session.</p>
+        <h2>See how it works.<br /><em>Then follow Maya’s workout.</em></h2>
+        <p className="guided-demo-lede">Follow Maya and her coach from the first step to the next workout.</p>
       </div>
       <div className="guided-demo-client"><span>DEMO CLIENT</span><strong>Maya R.</strong><p>Maya is practising how to stay in a conversation when criticism feels threatening.</p></div>
     </div>

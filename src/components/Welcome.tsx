@@ -17,9 +17,9 @@ export function Welcome({ onPrivacy, onPractitioner }: Props) {
         <div className="welcome-actions"><button className="primary-button" onClick={onPractitioner}>Try a guided workout <span>→</span></button><span className="hero-support">Maya’s session is ready to go</span></div>
       </div>
       <div className="landing-preview" aria-label="Preview of today's mental workout">
-        <div className="preview-topline"><span>Today’s workout</span><span>08 min</span></div>
-        <div className="preview-focus"><span className="preview-number">01</span><div><p className="preview-label">Focus: Pause</p><h2>More room before responding</h2><p>Notice the reaction. Find one more possible next step.</p></div></div>
-        <div className="preview-list"><div className="preview-row preview-row-done"><span>01</span><strong>Bring a real moment</strong><small>Ready</small></div><div className="preview-row"><span>02</span><strong>Notice what is happening</strong><small>Next</small></div><div className="preview-row"><span>03</span><strong>Try one thing changed</strong><small>Next</small></div></div>
+        <div className="preview-topline"><span>Maya’s workout</span><span>08 min</span></div>
+        <div className="preview-focus"><span className="preview-number">01</span><div><p className="preview-label">Focus: Pause before responding</p><h2>Stay for one more exchange</h2><p>When criticism feels exposing, notice the urge to leave and ask one clear question before you go.</p></div></div>
+        <div className="preview-list"><div className="preview-row preview-row-done"><span>01</span><strong>Look at a moment from your life</strong><small>Ready</small></div><div className="preview-row"><span>02</span><strong>Check what the reflection picked up</strong><small>Next</small></div><div className="preview-row"><span>03</span><strong>Try another response</strong><small>Next</small></div></div>
       <div className="preview-footer"><span>Set by your coach</span><span className="preview-arrow">↗</span></div>
       </div>
     </div>
